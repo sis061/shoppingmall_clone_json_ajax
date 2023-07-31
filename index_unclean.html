@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*--reset--*/
+        * {margin: 0; box-sizing: border-box;}
+        ul, ol, li {list-style:none; margin: 0; padding: 0;}
+
+        /*--헤더 시작--*/
+        header {width: 1260px; height: 160px; border: 1px solid #000; margin: 0 auto;}
+        header > #header_box {width: 1260px; height: 97px; background-color: #999;}
+        header > #header_box > #logo {width:220px ; height:40px ; float: left; margin:40px 0 10px 0;}
+        header > #header_box > #logo > img {width: 100%; height: 100%;}
+        header > #header_box > #searchbar {width: 350px; height: 50px; background-color: #F8F8F8; float: left; margin:40px 40px 10px 450px; border-radius: 5px;}
+        header > #header_box > #searchbar > input {float: left; width: 250px; height:50px; background-color: #F8F8F8; border:none; margin:0 0 0 30px; color: #999;}
+        header > #header_box > #searchbar > a > img {float: left; width: 27px; height: 27px; margin:10px 0 0 0;}
+
+        header > #header_box > #header_icon {width:200px; height: 50px; float: right; background-color: pink; margin: 40px 0 10px 0;}
+        header > #header_box > #header_icon > a > img {float: left; width: 45px; height: 45px; margin:0 10px;}
+        
+        /*--헤더 목록--*/
+
+        header > #header_gnb {width: 1260px; height: 63px; background-color: tomato;}
+        header > #header_gnb > nav > a > img {float:left; width: 20px; height:20px;  margin: 25px 0 0px 0;}
+        header > #header_gnb > nav > ul > a > li {float:left; margin: 25px 25px 0 25px ; text-decoration: none; color: #3E3E3E; font-weight: bold;}
+        header > #header_gnb > nav > ul > a:first-of-type {float: left; margin: 0 0 0 -10px;}
+        
+        header > #header_gnb > #login > ul {float:left; margin: 23px 0 0 260px; font-size: 14px;}
+        header > #header_gnb > #login > ul > a > li {float:left; text-decoration: none; color: #373737; margin: 0 10px;}
+        header > #header_gnb > #login > ul > li {float:left; color: #F0F0F0;}
+
+        /*--헤더 끝--*/
+
+        /*--슬라이더 시작--*/
+        #slider {width: 100%; height: 500px; margin: 0 auto;}
+        #sldier > a > img {width: 100%; height: 100%;; margin: auto;}
+
+        /*--슬라이더 끝--*/
+
+        /*--메인 시작--*/
+        main {width:100%; height: 8090px; 1px solid #000; margin: 0 auto;}
+        /*--메인 상단 아이콘--*/
+        main > #main_icon {width: 1260px; height: 300px; border: 1px solid #000; margin: 0 auto;}
+        main > #main_icon > .main_iconbox {float: left; width: 90px; height:112.5px; margin: 80px 7px 10px 7px; }
+        main > #main_icon > .main_iconbox > a {text-decoration: none; color:#000; font-size: 15px; float:left;  width: 100px; height: 90px; }
+        main > #main_icon > .main_iconbox > a > img {float: left; width: 80px; height: 80px; margin: 0 0 10px 10px;}
+        main > #main_icon > .main_iconbox > a > span {display: inline-block; text-align: center;  width:100px;}
+
+        /*--메인 타임특가--*/
+        main > #main_timesale {width: 1260px; height: 870px; border: 1px solid #000; margin: 0 auto;}
+        main > #main_timesale > a {float: left; width: 250px; height: 75px; background-color: red; margin:0 505px;}
+        main > #main_timesale > a > img {width: 250px; height: 75px;}
+        main > #main_timesale > h1 {text-align: center; font-size: 40px; margin: 10px 0 20px 0;}
+        main > #main_timesale > #timesale_box {width: 1260px; height: 600px; float: left; background-color: skyblue;}
+        main > #main_timesale > #timesale_box > .timesale_product {width: 390px; height: 600px; background-color: green; 
+            float: left; margin: 0 15px; border-radius: 5px; overflow: hidden; box-shadow: 4px 4px 4px #eee;}
+        main > #main_timesale > #timesale_box > .timesale_product > a > img {width: 390px; height: 390px;}
+        main > #main_timesale > #timesale_box > .timesale_product > a > h3 {float: left; color: #000; margin: 20px 20px 10px 20px;}
+        main > #main_timesale > #timesale_box > .timesale_product > a > span {float: left; color: #000; font-size: 25px; font-weight: bold; margin: 0 0 0 20px; width: 100%;}
+        main > #main_timesale > #timesale_box > .timesale_product > a > #timesale_01::before {content:"28%"; color: #FF4438;}
+        main > #main_timesale > #timesale_box > .timesale_product > a > #timesale_02::before {content:"33%"; color: #FF4438;}
+        main > #main_timesale > #timesale_box > .timesale_product > a > #timesale_03::before {content:"31%"; color: #FF4438;}
+        main > #main_timesale > #timesale_box > .timesale_product > a > p {float: left; color:#AEAEAE; font-size: 15px; margin: 0 0 10px 20px; text-decoration: line-through;}
+
+        /*--메인 베너1--*/
+        main > #main_ban1 {width: 1260px; height: 200px; border: 1px solid #000; margin: 0 auto;}
+        main > #main_ban1 > a > img {float: left; width: 100%; height: 100%;}
+
+        /*--뮤제오에만 있어요--*/
+        main > #main_only {width: 1260px; height: 1220px; border: 1px solid #000; margin: 0 auto;}
+        main > #main_only > h1 {text-align: center; font-size: 40px; margin: 150px 0 0 0; font-weight: bolder;}
+       
+        main > #main_only > #only_productbox {width: 1260px; height:350px; background-color: blue; float: left; margin: 30px 0; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center;}
+        main > #main_only > #only_productbox > .only_product {width: 220px; height: 350px; background-color: gold; 
+            float: left; border-radius: 5px; overflow: hidden; margin:0 0 0 40px;}
+        main > #main_only > #only_productbox > .only_product:nth-of-type(1) {margin-left: 0;}
+        main > #main_only > #only_productbox > .only_product:nth-of-type(6) {margin-left: 0;}
+        main > #main_only > #only_productbox > .only_product > a > img {width: 220px; height: 220px;}
+        main > #main_only > #only_productbox > .only_product > a > h3 {float: left; color: #000; margin: 10px 20px 5px 0px; font-size: 14px; line-height: 20px; width: 220px;}
+        main > #main_only > #only_productbox > .only_product > a > span {float: left; color: #000; font-size: 20px; font-weight: bold; margin: 0; width: 100%;}
+        main > #main_only > #only_productbox > .only_product > a > #only_01::before {content:"36% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > #only_02::before {content:"8% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > #only_03::before {content:"40% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > #only_04::before {content:"15% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > #only_06::before {content:"32% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > #only_07::before {content:"15% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > #only_08::before {content:"15% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > #only_09::before {content:"27% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > #only_10::before {content:"6% "; color: #FF4438;}
+        main > #main_only > #only_productbox > .only_product > a > p {float: left; color:#AEAEAE; font-size: 12px; margin: 0 0 10px 0px; text-decoration: line-through;}
+        
+        /*--md 추천--*/
+        main > #main_md {width: 100%; height: 779.16px; border: 1px solid #000; margin: 0 auto; background-color: #FAF9F6;}
+        main > #main_md > h1 {text-align: center; font-size: 40px; margin: 100px 0 0 0; font-weight: bolder;}
+        #md_box {width: 100%; height: 531.03px; background-color: tomato; margin: 20px 0 30px 0 ; float: left; overflow: hidden;}
+        main > #main_md > #md_box > .item_box {width: 317.16px; height: 531.03px; background-color: yellow; float: left; margin: 0 60px 0 0; text-align: center;}
+        main > #main_md > #md_box > .item_box > a > img {width: 317.16px; height: 317.16px; border-radius: 100%;}
+        main > #main_md > #md_box > .item_box > a > h3 {color: #000;  font-size: 12px; line-height: 20px; width: 317.16px; text-align: center; text-decoration: none; background-color: red; float: left; margin: 20px 0 0 0 ;}
+        main > #main_md > #md_box > .item_box > span {float: left; color: #000; font-size: 20px; font-weight: bold;  width: 100%; text-align: center; margin: 30px 0 0 0;}
+        main > #main_md > #md_box > .item_box > #md_01:before {content:"36% "; color: #FF4438;}
+        main > #main_md > #md_box > .item_box > #md_02:before {content:"13% "; color: #FF4438;}
+        main > #main_md > #md_box > .item_box > #md_03:before {content:"28% "; color: #FF4438;}
+        main > #main_md > #md_box > .item_box > #md_04:before {content:"31% "; color: #FF4438;}
+        main > #main_md > #md_box > .item_box > #md_0:before {content:"16% "; color: #FF4438;}
+        main > #main_md > #md_box > .item_box > p {color:#AEAEAE; font-size: 12px;  text-decoration: line-through; text-align: center;}
+
+        /*--카뮤 이벤트--*/
+        main > #main_event {width: 1260px; height: 856.59px; border: 1px solid #000; margin: 0 auto;}   
+        main > #main_event > h1 {text-align: center; font-size: 40px; margin: 100px 0 0 0; font-weight: bolder;}
+        main > #main_event > #event_box {width: 1260px; height: 700px; float: left; background-color: skyblue; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center;}
+        main > #main_event > #event_box > .event_product {width: 600px; height: 560px; background-color: green; 
+            float: left; border-radius: 5px; overflow: hidden; box-shadow: 4px 4px 4px #eee;}
+        main > #main_event > #event_box > .event_product > a > .event_big {float: left; width: 100%; }
+        main > #main_event > #event_box > .event_product > a > .event_small {float: left; width:100px; height: 100px; border-radius: 100%; margin: 50px 20px 0 20px;}
+        main > #main_event > #event_box > .event_product > a > h3 {color: #000;  font-size: 17px; line-height: 20px; width: 400px; text-decoration: none; background-color: red; float: left; margin: 40px 0 0 0 ;}
+        main > #main_event > #event_box > .event_product > a > span {float: left; color: #000; font-size: 20px; font-weight: bold;  width: 75px;  margin: 50px 0 0 0; background-color: blue; }
+        main > #main_event > #event_box > .event_product > a > #event_1_1 {float: left; color: #000; font-size: 20px; font-weight: bold;  width: 120px;  margin: 50px 0 0 0; background-color: blue; }
+        main > #main_event > #event_box > .event_product > a > #event_1_1:before {content:"24% "; color: #FF4438;}
+        main > #main_event > #event_box > .event_product > a > p {color:#AEAEAE; font-size: 15px;  text-decoration: line-through; float: left; margin: 58px 0 0 0; background-color: gold; width: 70px;}
+        main > #main_event > #event_box > .event_product > a > .event_icon1 {float: right; width: 30px; height: 30px; margin: -55px 20px 10px 550px; background-color: gold;}
+        main > #main_event > #event_box > .event_product > a > .event_icon2 {float: right; width: 30px; height: 30px; margin: 0 20px 100px 550px; background-color: gold;}
+
+        /*--카테고리 추천 아이템--*/
+        main > #main_rec {width: 1260px; height: 750px; border: 1px solid #000; margin: 0 auto;}
+        main > #main_rec > h1 {text-align: center; font-size: 40px; margin: 100px 0 0 0; font-weight: bolder;}
+        main > #main_rec > #rec_nav {float: left; width: 1160px; height: 30px; background-color: gold; margin: 30px 0 30px 45px;}
+        main > #main_rec > #rec_nav > ul {display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center; }
+        main > #main_rec > #rec_nav > ul > a > li {float: left; text-decoration: none; color: #888888; padding: 7px 20px ; border-radius: 20px; border:1px solid #999; margin:0 10px}
+        main > #main_rec > .rec_productbox {width: 1260px; height:350px; background-color: blue; float: left; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center;}
+        main > #main_rec > .rec_productbox > .rec_product {width: 220px; height: 350px; background-color: gold; 
+            float: left; border-radius: 5px; overflow: hidden; }
+            main > #main_rec > .rec_productbox > .rec_product > a > img {width: 220px; height: 220px; float: left;}
+            main > #main_rec > .rec_productbox > .rec_product > a > h3 {float: left; color: #000; margin: 10px 20px 5px 0px; font-size: 14px; line-height: 20px; width: 220px; height: 40px; background-color: red;}
+            main > #main_rec > .rec_productbox > .rec_product > a > span {float: left; color: #000; font-size: 20px; font-weight: bold; margin: 0; width: 100%;}
+            main > #main_rec > .rec_productbox > .rec_product > a > #rec_01::before {content:"31% "; color: #FF4438;}
+            main > #main_rec > .rec_productbox > .rec_product > a > #rec_02::before {content:"27% "; color: #FF4438;}
+            main > #main_rec > .rec_productbox > .rec_product > a > #rec_03::before {content:"40% "; color: #FF4438;}
+            main > #main_rec > .rec_productbox > .rec_product > a > #rec_04::before {content:"14% "; color: #FF4438;}
+            main > #main_rec > .rec_productbox > .rec_product > a > #rec_05::before {content:"17% "; color: #FF4438;}
+            main > #main_rec > .rec_productbox > .rec_product > a > p {float: left; color:#AEAEAE; font-size: 12px; margin: 0 0 10px 0px; text-decoration: line-through;}
+
+        /*--메인 베너1--*/
+        main > #main_ban2 {width: 1260px; height: 200px; border: 1px solid #000; margin: 0 auto;}
+        main > #main_ban2 > a > img {float: left; width: 100%; height: 100%;}
+
+        /*--새로 나왔어요--*/
+        main > #main_new {width: 1260px; height: 1209.16px; border: 1px solid #000; margin: 0 auto;}
+        main > #main_new > h1 {text-align: center; font-size: 40px; margin: 100px 0 30px 0; font-weight: bolder;}
+        main > #main_new > a > img {float: left; width: 484px; height:830px; border-radius: 5px;}
+        main > #main_new > .new_productbox {width: 728px; height:830px; background-color: blue; float: left; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center; margin: 0 0 0 45px;}
+        main > #main_new > .new_productbox >.new_product {width: 220px; height: 350px; background-color: gold; 
+            float: left; border-radius: 5px; overflow: hidden; margin:0 0 65px 0;}
+        main > #main_new > .new_productbox >.new_product > a > img {width: 220px; height: 220px; float: left;}
+        main > #main_new > .new_productbox >.new_product > a > h3 {float: left; color: #000; margin: 10px 20px 5px 0px; font-size: 15px; line-height: 20px; width: 220px; height: 40px; background-color: red;}
+        main > #main_new > .new_productbox >.new_product > a > span {float: left; color: #000; font-size: 20px; font-weight: bold; margin: 0; width: 100%;}
+        main > #main_new > .new_productbox >.new_product > a > #new_01::before {content:"11% "; color: #FF4438;}
+        main > #main_new > .new_productbox >.new_product > a > #new_03::before {content:"34% "; color: #FF4438;}
+        main > #main_new > .new_productbox >.new_product > a > #new_04::before {content:"30% "; color: #FF4438;}
+        main > #main_new > .new_productbox >.new_product > a > #new_05::before {content:"12% "; color: #FF4438;}
+        main > #main_new > .new_productbox >.new_product > a > #new_06::before {content:"11% "; color: #FF4438;}
+        main > #main_new > .new_productbox >.new_product > a > p {float: left; color:#AEAEAE; font-size: 12px; margin: 0 0 10px 0px; text-decoration: line-through; width: 200px;}
+        main > #main_new > .new_productbox >.new_product > a > .newicon {float:left; width: 40px; height: 13px;}
+
+        /*--뮤제오 티비--*/
+        main > #main_video {width: 100%; height: 895px; border: 1px solid #000; margin: 0 auto; background-color: #E9DED3; align-content:center}
+        main > #main_video > h1 {text-align: center; font-size: 40px; margin: 100px 0 0 0; font-weight: bolder;}
+        main > #main_video > #vidbox {width: 1260px; height: 600px; background-color: blue; margin: 0 auto; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center}
+        main > #main_video > #vidbox > .vidbox_item {width: 600px; height: 500px; background-color: green; float: left;
+             border-radius: 5px; overflow: hidden; text-align: center; }
+        main > #main_video > #vidbox > .vidbox_item > a > img {width: 600px; height: 407px;}
+        main > #main_video > #vidbox > .vidbox_item > p {margin: 15px 0 0 0 ;}
+
+        /*--브랜드관--*/
+        main > #main_brand {width: 1260px; height: 657px; border: 1px solid #000; margin: 0 auto;}
+        main > #main_brand > h1 {text-align: center; font-size: 40px; margin: 100px 0 0 0; font-weight: bolder;}
+        main > #main_brand > #brandbox {width: 1260px; height: 500px; background-color: blue; margin: 0 auto; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center}
+        main > #main_brand > #brandbox > a > img {border-radius: 5px; width: 302px; height: 127px; margin: 5px 0;}
+
+        /*--메인 끝--*/
+
+        /*--푸터 시작--*/
+        footer {width: 100%; height: 623.86px; border: 1px solid #000; margin: 0 auto; }
+        footer > #footer_info {width: 100%; height: 79.91px; background-color: #EEEBE2; margin: 0 auto;}
+        footer > #footer_info > #info_box {width: 1260px; height: 80px; margin: 0 auto;}
+        footer > #footer_info > #info_box > h3 {float: left; width: 100px; height: 80px; background-color: gold; margin: auto; padding: 25px 10px 10px 0;}
+        footer > #footer_info > #info_box > ul {float: left; width: 1050px; height: 80px; overflow: hidden; text-decoration: none; }
+        footer > #footer_info > #info_box > ul > a {text-decoration: none; }
+        footer > #footer_info > #info_box > ul > a > li {color: #6E6E6E; background-color: skyblue; width: 1000px; height: 80px; margin: auto; padding: 25px 10px 10px 0; text-decoration: none; }
+        footer > #footer_info > #info_box > a {float: right; text-decoration: none; color: #000; margin: auto; padding: 25px 10px 10px 0;}
+        
+        footer > #footer_content {width: 100%; height: 544px;  margin: 0 auto; background-color: #1F140E;}
+        footer > #footer_content > #footer_contentbox {width: 1280px; height: 369px; margin: 85px auto;}
+        footer > #footer_content > #footer_contentbox > a {float: left; background-color: red; }
+        footer > #footer_content > #footer_contentbox > a > img {float: left; width: 220px; height: 40px;}
+        footer > #footer_content > #footer_contentbox > #footer_icon {float: left; width: 220px; height: 40px; background-color: rebeccapurple; margin: 70px 30px 0 -220px; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center}
+        footer > #footer_content > #footer_contentbox > #footer_nav {float: left; background-color: green; width: 700px; height: 50px;}
+        footer > #footer_content > #footer_contentbox > #footer_nav > ul {float: left;  text-decoration: none; }
+        footer > #footer_content > #footer_contentbox > #footer_nav > ul > a {text-decoration: none; }
+        footer > #footer_content > #footer_contentbox > #footer_nav > ul > a > li {color: #FFFFFF; float: left; margin: 0 10px;}
+        footer > #footer_content > #footer_contentbox > #footer_text {float: left; background-color: red; width: 700px; height: 300px; margin: 20px 0 0 0 ;}
+        footer > #footer_content > #footer_contentbox > #footer_text > span {font-size: 17px; color: #888888;}
+        footer > #footer_content > #footer_contentbox > #footer_text > p {font-size: 13px; margin: 30px 0; line-height: 20px; color: #888888;}
+        footer > #footer_content > #footer_contentbox > #footer_customer {float: right; background-color: purple; text-align: right; height: 300px; margin: -30px 0 0 0;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > h5 {margin: 5px 0; color: #FFFFFF;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > img {width: 30px; height: 30px; color: #FFFFFF;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > strong {font-size: 30px; color: #FFFFFF;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > p {font-size: 13px; line-height: 20px; color: #888888;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > span {float:right ;border: 1px solid #888888;; margin: 15px 0; padding: 5px 20px; border-radius: 50px; color: #888888;}
+        /*--푸터 끝--*/
+
+    </style>
+
+</head>
+<body>
+    <!--헤더-->
+    <header>
+        <div id="header_box">
+            <div id="logo">
+                <img src="img/logo.png" alt="로고">
+            </div>
+            <div id="searchbar">
+                <input type="text" name="search" placeholder="비알레띠">
+                <a href=""><img src="img/searchbar.png" alt="검색돋보기"></a>
+            </div>
+            <div id="header_icon">
+                <a href=""><img src="img/heart.png" alt="찜"></a>
+                <a href=""><img src="img/user.png" alt="개인정보"></a>
+                <a href=""><img src="img/cart.png" alt="장바구니"></a>
+            </div>
+        </div>
+
+        <div id="header_gnb">
+            <nav>
+               <a href=""><img src="img/menu.png" alt="전체카테고리"></a>
+                <ul>
+                    <a href=""><li>카테고리</li></a>
+                    <a href=""><li>베스트</li></a>
+                    <a href=""><li>신상품</li></a>
+                    <a href=""><li>뮤제OH!특가</li></a>
+                    <a href=""><li>커뮤니티</li></a>
+                    <a href=""><li>이벤트</li></a>
+                    <a href=""><li>브랜드</li></a>
+                </ul>
+            </nav>
+
+            <div id="login">
+                <ul>
+                    <a href=""><li>로그인</li></a>
+                    <li>|</li>
+                    <a href=""><li>회원가입</li></a>
+                    <li>|</li>
+                    <a href=""><li>고객문의</li></a>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+    <!--슬라이더-->
+    <div id="slider">
+        <a href=""><img src="img/slider_01.jpg" alt="슬라이더1"></a>
+    </div>
+
+    <!--메인-->
+    <main>
+    <!--메인 상단 아이콘-->
+        <div id="main_icon">
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon1.png" alt="원두">
+                    <span>커피원두</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon2.png" alt="생두">
+                    <span>생두</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon3.png" alt="핸드드립">
+                    <span>핸드드립</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon4.png" alt="커피추출용품">
+                    <span>커피추출용품</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon5.png" alt="시럽">
+                    <span>시럽/소스</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon6.png" alt="테이크아웃">
+                    <span>테이크아웃</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon7.png" alt="잔">
+                    <span>잔/텀블러</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon8.png" alt="차">
+                    <span>차</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon9.png" alt="관련">
+                    <span>커피관련용품</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon10.png" alt="리빙">
+                    <span>리빙용품</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon11.png" alt="카페">
+                    <span>카페용품</span>
+                </a>
+            </div>
+            <div class="main_iconbox">
+                <a href="">
+                    <img src="img/main_icon12.png" alt="머신">
+                    <span>머신</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!--메인 타임특가-->
+        <div id="main_timesale">
+            <a href=""><img src="img/timesale box.jpg" alt="타임특가 로고"></a>
+            <!-- 아래 h1 : 디데이 카운트, 나중에 자바로 만들것-->
+            <h1> nn일 hh : mm : ss </h1>
+
+            <div id="timesale_box">
+                <div class="timesale_product">
+                    <a href=""><img src="img/timesale 01.jpg" alt="그라인더 B20"></a>
+                    <a href=""><h3>마리슈타이거 루미 무선 충전식 그라인더 B20</h3></a>
+                    <a href=""><span id="timesale_01">34,500원</span></a>
+                    <a href=""><p>40,000원</p></a>
+                </div>
+
+                <div class="timesale_product">
+                    <a href=""><img src="img/timesale 02.jpg" alt="그라인더 B60"></a>
+                    <a href=""><h3>마리슈타이거 루미 무선 충전식 그라인더 B60</h3></a>
+                    <a href=""><span id="timesale_02">37,500원</span></a>
+                    <a href=""><p>56,000원</p></a>
+                </div>
+
+                <div class="timesale_product">
+                    <a href=""><img src="img/timesale 03.jpg" alt="그라인더 s60"></a>
+                    <a href=""><h3>마리슈타이거 루미 무선 충전식 그라인더 S60</h3></a>
+                    <a href=""><span id="timesale_03">42,500원</span></a>
+                    <a href=""><p>62,000원</p></a>
+                </div>
+            </div>
+        </div>
+        <!--메인 베너 1-->
+        <!--베너 이동 나중에 자바로 만들것-->
+        <div id="main_ban1">
+            <a href=""><img src="img/ban1_01.jpg" alt="메인 베너1"></a>
+        </div>
+
+        <!--뮤제오에만 있어요-->
+        <div id="main_only">
+            <h1>뮤제오에만 있어요</h1>
+            <div id="only_productbox">
+            <div class="only_product">
+                <a href=""><img src="img/only_01.jpg" alt="드립백"></a>
+                    <a href=""><h3>카페뮤제오 에티오피아 디카페인<br> 드립백 72개입</h3></a>
+                    <a href=""><span id="only_01">59,800원</span></a>
+                    <a href=""><p>93,600원</p></a>
+            </div>
+            <div class="only_product">
+                <a href=""><img src="img/only_02.jpg" alt="선물세트"></a>
+                    <a href=""><h3>갓볶은 커피 세계 3대 커피 <br> 선물세트 (100gx3)</h3></a>
+                    <a href=""><span id="only_02">58,000원</span></a>
+                    <a href=""><p>63,400원</p></a>
+            </div>
+            <div class="only_product">
+                <a href=""><img src="img/only_03.jpg" alt="케멕스 드립"></a>
+                    <a href=""><h3>케멕스 클래식 홈카페 <br> 핸드드립세트 3컵</h3></a>
+                    <a href=""><span id="only_03">94,800원</span></a>
+                    <a href=""><p>158,000</p></a>
+            </div>
+            <div class="only_product">
+                <a href=""><img src="img/only_04.jpg" alt="아벤시 컵"></a>
+                    <a href=""><h3>아이코사 브루하우스 아벤시 <br> 글래스컵 세트 3종</h3></a>
+                    <a href=""><span id="only_04">89,000원</span></a>
+                    <a href=""><p>105,000원</p></a>
+            </div>
+            <div class="only_product">
+                <a href=""><img src="img/only_05.jpg" alt="리쉬티 티백"></a>
+                    <a href=""><h3>리쉬티 뮤제오 x 리쉬티 <br> 버라이어티팩 10티백</h3></a>
+                    <a href=""><span>22,000원</span></a>
+                    <a href=""><p>22,000원</p></a>
+            </div>
+             </div>
+            <div id="only_productbox">
+            <div class="only_product">
+                <a href=""><img src="img/only_06.jpg" alt="샤또 수저"></a>
+                    <a href=""><h3>러브라믹스 샤또 디너 세트 골드 <br> 3PCS</h3></a>
+                    <a href=""><span id="only_06">35,700원</span></a>
+                    <a href=""><p>53,000원</p></a>
+            </div>
+            <div class="only_product">
+                <a href=""><img src="img/only_07.jpg" alt="플라멩코 캡슐"></a>
+                    <a href=""><h3>카페뮤제오 스페셜티 캡슐 커피 <br> 플라멩코 100개입</h3></a>
+                    <a href=""><span id="only_07">75,000원</span></a>
+                    <a href=""><p>89,000원</p></a>
+            </div>
+            <div class="only_product">
+                <a href=""><img src="img/only_08.jpg" alt="비알레띠 레드"></a>
+                    <a href=""><h3>비알레띠 모카 익스프레스 I <br> LOVE COFFEE 레드 3컵</h3></a>
+                    <a href=""><span id="only_08">51,000원</span></a>
+                    <a href=""><p>60,000원</p></a>
+            </div>
+            <div class="only_product">
+                <a href=""><img src="img/only_09.jpg" alt="비알레띠 블랙"></a>
+                    <a href=""><h3>비알레띠 뉴 브리카 매트블랙 2컵</h3></a>
+                    <a href=""><span id="only_09">59,400원</span></a>
+                    <a href=""><p>82,000원</p></a>
+            </div>
+            <div class="only_product">
+                <a href=""><img src="img/only_10.jpg" alt="아람 커피메이커"></a>
+                    <a href=""><h3>아람 커피메이커 스탠드 세트 - <br> 타타주바 옐로우</h3></a>
+                    <a href=""><span id="only_10">748,000원</span></a>
+                    <a href=""><p>800,000원</p></a>
+            </div>
+            </div>
+        </div>
+
+        <!--md 추천-->
+        <div id="main_md">
+            <h1>MD 추천상품</h1>
+        <!--나중에 자바로 만들것-->
+            <div id="md_box">
+                <div class="item_box">
+                    <a href=""><img src="img/md_01.jpg" alt=""></a>
+                    <a href=""><h3>갓볶은커피 사무실커피 추천세트 3kg (1kgx3)</h3></a>
+                    <span id="md_01">66,500원</span>
+                    <p>210,000원</p>
+                </div>
+                
+                <div class="item_box">
+                    <a href=""><img src="img/md_02.jpg" alt=""></a>
+                    <a href=""><h3>일사 에볼루션 밀크저그 3컵 350cc 레인보우</h3></a>
+                    <span id="md_02">39,000원</span>
+                    <p> 45,000원</p>
+                </div>
+                  
+                <div class="item_box">
+                    <a href=""><img src="img/md_03.jpg" alt=""></a>
+                    <a href=""><h3>케멕스 케메어 CM-AER8 (8cup)Chemex</h3></a>
+                    <span id="md_03">79,200원</span>
+                    <p>110,000원</p>
+                </div>
+                       
+                <div class="item_box">
+                    <a href=""><img src="img/md_04.jpg" alt=""></a>
+                    <a href=""><h3>마리슈타이거 루미 무선 충전식 그라인더 S60</h3></a>
+                    <span id="md_04">42,500원</span>
+                    <p>62,000원</p>
+                </div>
+                            
+                <div class="item_box">
+                    <a href=""><img src="img/md_05.jpg" alt=""></a>
+                    <a href=""><h3>와카코 피코프레소 (파우치 포함)</h3></a>
+                    <span id="md_05">166,000원</span>
+                    <p>198,000원</p>
+                </div>
+            </div>
+        
+
+        </div>
+           <!--이벤트 섹션-->
+        <div id="main_event">
+            <h1>카뮤 이벤트</h1>
+            <div id="event_box">
+                <div class="event_product">
+                    <a href="" ><img src="img/event_big1.jpg" alt="아임요 사은품" class="event_big"></a>
+                    <a href="" ><img src="img/event_1_1.jpg" alt="아임요 청포도" class="event_small"></a>
+                    <a href=""><h3>아임요 청포도 베이스 1kg</h3></a>
+                    <a href=""><span id="event_1_1">9,100원</span></a>
+                    <a href=""><p>12,000원</p></a>
+                    <a href=""><img src="img/heart.png" alt="찜 아이콘" class="event_icon1"></a>
+                    <a href=""><img src="img/cart.png" alt="장바구니 아이콘" class="event_icon2"></a>
+                </div>
+                <div class="event_product">
+                    <a href=""><img src="img/event_big2.jpg" alt="오르카 캡슐" class="event_big"></a>
+                    <a href=""><img src="img/event_2_1.jpg" alt="오르카 10개입" class="event_small"></a>
+                    <a href=""><h3>카페뮤제오 캡슐커피 오르카 10개입(1+1 행사)</h3></a>
+                    <a href=""><span>6,900원</span></a>
+                    <a href=""><p>6,900원</p></a>
+                    <a href=""><img src="img/heart.png" alt="찜 아이콘" class="event_icon1"></a>
+                    <a href=""><img src="img/cart.png" alt="장바구니 아이콘" class="event_icon2"></a>
+                </div>
+            </div>
+        </div>
+        <!--카테고리 추천-->
+        <div id="main_rec">
+            <h1>카테고리 추천 아이템</h1>
+            <div id="rec_nav">
+                <ul>
+                    <a href=""><li>모카포트</li></a>
+                    <a href=""><li>갓볶은커피</li></a>
+                    <a href=""><li>드립용품</li></a>
+                    <a href=""><li>에스프레소잔</li></a>
+                    <a href=""><li>그라인더</li></a>
+                    <a href=""><li>시럽/소스</li></a>
+                    <a href=""><li>테이크아웃</li></a>
+                    <a href=""><li>바리스타</li></a>
+                </ul>
+            </div>
+            <div class="rec_productbox">
+            <div class="rec_product">
+                <a href=""><img src="img/rec_01.jpg" alt="비알레띠 모카포트"></a>
+                    <a href=""><h3>비알레띠 뉴 브리카 모카포트 2컵  </h3></a>
+                    <a href=""><span id="rec_01">52,800원 </span></a>
+                    <a href=""><p>77,000원</p></a>
+            </div>
+            <div class="rec_product">
+                <a href=""><img src="img/rec_02.jpg" alt="비알레띠 올리브그린"></a>
+                    <a href=""><h3>비알레띠 뉴 브리카 올리브그린 <br> 2컵</h3></a>
+                    <a href=""><span id="rec_02">59,400원</span></a>
+                    <a href=""><p>82,000원</p></a>
+            </div>
+            <div class="rec_product">
+                <a href=""><img src="img/rec_03.jpg" alt="비알레띠 인덕션"></a>
+                    <a href=""><h3>비알레띠 브리카 인덕션 4컵 </h3></a>
+                    <a href=""><span id="rec_03">77,000원 </span></a>
+                    <a href=""><p>130,000원</p></a>
+            </div>
+            <div class="rec_product">
+                <a href=""><img src="img/rec_04.jpg" alt="모카포트 블렌드"></a>
+                    <a href=""><h3>갓볶은커피 모카포트 블렌드  </h3></a>
+                    <a href=""><span id="rec_04">6,000원</span></a>
+                    <a href=""><p>7,000원</p></a>
+            </div>
+            <div class="rec_product">
+                <a href=""><img src="img/rec_05.jpg" alt="저장용기"></a>
+                    <a href=""><h3>비알레띠 글래스 커피 저장 용기 </h3></a>
+                    <a href=""><span>24,900원</span></a>
+                    <a href=""><p>30,000원</p></a>
+            </div>
+        </div>
+        </div>
+
+        <!--메인 베너 2-->
+        <!--베너 이동 나중에 자바로 만들것-->
+
+        <div id="main_ban2">
+        <a href=""><img src="img/ban2_01.jpg" alt="메인 베너2"></a>
+        </div>
+        
+        <!--새로 나왔어요-->
+        <div id="main_new">
+            <h1>새로 나왔어요</h1>
+            <a href=""><img src="img/new_big_01.jpg" alt="신상품 대형"></a>
+            <!--좌우 이동 나중에 자바로 만들것-->
+            <div class="new_productbox">
+                <div class="new_product">
+                    <a href=""><img src="img/new_01.jpg" alt="온두라스 렘피라 오바타"></a>
+                        <a href=""><h3>갓볶은커피 온두라스 렘피라 <br> 오바타  </h3></a>
+                        <a href=""><span id="new_01">7,500원 </span></a>
+                        <a href=""><p>8,500원</p></a>
+                        <img src="img/icon_new.gif" alt="신상품" class="newicon">
+                </div>
+                <div class="new_product">
+                    <a href=""><img src="img/new_02.jpg" alt="라파엘 워시드 (워터멜론)"></a>
+                        <a href=""><h3>생두 콜롬비아 산 라파엘 워시드 (워터멜론)</h3></a>
+                        <a href=""><span>24,000원</span></a>
+                        <a href=""><p>24,000원</p></a>
+                        <img src="img/icon_taxfree.gif" alt="면세" class="newicon">
+                </div>
+                <div class="new_product">
+                    <a href=""><img src="img/new_03.jpg" alt="폰타노 도징링"></a>
+                        <a href=""><h3>폰타노 도징링 58mm - 블랙 </h3></a>
+                        <a href=""><span id="new_03">9,900원 </span></a>
+                        <a href=""><p>15,000원</p></a>
+                        <img src="img/icon_event.gif" alt="이벤트" class="newicon">
+                </div>
+                <div class="new_product">
+                    <a href=""><img src="img/new_04.jpg" alt="폰타노 도징컵"></a>
+                        <a href=""><h3>폰타노 도징컵 58mm - 블랙  </h3></a>
+                        <a href=""><span id="new_04">21,000원 </span></a>
+                        <a href=""><p>30,000원</p></a>
+                        <img src="img/icon_event.gif" alt="이벤트" class="newicon">
+                </div>
+                <div class="new_product">
+                    <a href=""><img src="img/new_05.jpg" alt="안캅 에덱스 카푸치노"></a>
+                        <a href=""><h3>안캅 에덱스 카푸치노 에볼루션 그린 190ml</h3></a>
+                        <a href=""><span id="new_05">35,000원</span></a>
+                        <a href=""><p>40,000원</p></a>
+                </div>
+                <div class="new_product">
+                    <a href=""><img src="img/new_06.jpg" alt="일사 에볼루션 밀크저그"></a>
+                        <a href=""><h3>일사 에볼루션 밀크저그 9컵 750cc 동 </h3></a>
+                        <a href=""><span id="new_06">53,000원 </span></a>
+                        <a href=""><p>60,000원</p></a>
+                </div>
+            </div>
+        </div>
+
+        <!--뮤제오티비-->
+        <div id="main_video">
+            <h1>뮤제오 TV</h1>
+            <div id="vidbox">
+            <div class="vidbox_item">
+                <a href=""><img src="img/vid_01.jpg" alt="페이마 690N"></a>
+                <p>홈카페 전동 그라인더 신상 언박싱!</p>
+                <h3>페이마 690N 멀티프로 안티스테틱</h3>
+            </div>
+            <div class="vidbox_item">
+                <a href=""><img src="img/vid_02.jpg" alt="와카코 NS2"></a>
+                <p>와.카.코의 뉴페이스!</p>
+                <h3>와카코 미니프레소 NS2</h3>
+            </div>
+            </div>
+        </div>
+
+        <!--브랜드관-->
+        <div id="main_brand">
+            <h1>브랜드관</h1>
+            <div id="brandbox">
+                <a href=""><img src="img/brand_ban01.png" alt=""></a>
+                <a href=""><img src="img/brand_ban02.png" alt=""></a>
+                <a href=""><img src="img/brand_ban03.png" alt=""></a>
+                <a href=""><img src="img/brand_ban04.png" alt=""></a>
+                <a href=""><img src="img/brand_ban05.png" alt=""></a>
+                <a href=""><img src="img/brand_ban06.png" alt=""></a>
+                <a href=""><img src="img/brand_ban07.png" alt=""></a>
+                <a href=""><img src="img/brand08_aram.png" alt=""></a>
+                <a href=""><img src="img/brand09_ifyoucare.png" alt=""></a>
+                <a href=""><img src="img/brand10_keepcup.png" alt=""></a>
+                <a href=""><img src="img/brand11_airflow.png" alt=""></a>
+                <a href=""><img src="img/brand12_wacaco.png" alt=""></a>
+            </div>
+        </div>
+    </main>
+
+    <!--푸터-->
+    <footer>
+        <div id="footer_info">
+            <div id="info_box">
+                <h3>NOTICE</h3>
+                <ul id="info_list">
+                    <!--리스트 이동 나중에 자바로 만들기-->
+                    <a href=""><li>카페뮤제오 휴무 공지(5월)</li></a>
+                    <a href=""><li>2024 설 연휴 배송 공지 </li></a>
+                    <a href=""><li>4월 25일(화) 고객 상담시간 변경 안내</li></a>
+                </ul>
+                <a href="">더보기 +</a>
+            </div>
+        </div>
+        <div id="footer_content">
+            <div id="footer_contentbox">
+                <a href=""><img src="img/logo_footer.png" alt=""></a>
+                <div id="footer_icon">
+                    <a href=""><img src="img/ico_foot_link01.png" alt=""></a>
+                    <a href=""><img src="img/ico_foot_link02.png" alt=""></a>
+                    <a href=""><img src="img/ico_foot_link03.png" alt=""></a>
+                    <a href=""><img src="img/ico_foot_link04.png" alt=""></a>
+                    <a href=""><img src="img/ico_foot_link05.png" alt=""></a>
+                </div>
+                <div id="footer_nav">
+                    <ul>
+                        <a href=""><li>회사소개</li></a>
+                        <a href=""><li>사업소개</li></a>
+                        <a href=""><li>카뮤인채용</li></a>
+                        <a href=""><li>이용약관</li></a>
+                        <a href=""><li>개인정보처리방침</li></a>
+                        <a href=""><li>업체상담</li></a>
+                    </ul>
+                </div>
+                <div id="footer_text">
+                    <span>빨리 가기보다는 조금 늦더라도 멀리 보겠습니다. 신뢰를 바탕으로 실력을 쌓아갑니다.</span>
+
+                    <p>(주)뮤제오 | 대표:서동의 <br>
+                    본사 : 서울특별시 성동구 연무장5가길 25 (성수역 SK V1 Tower) 1110~1112호 <br>
+                    로스팅, 물류센터:경기도 용인시 처인구 경안천로 256번길 69 <br>
+                    통신판매업신고번호:2021-서울성동-01241 | 개인정보보호책임자:최동환 <br>
+                    사업자등록번호:117-81-58115 <br>
+                    이메일:mail@museo.co.kr | 사업자,대량주문:sale@museo.co.kr <br>
+                    팩스:02-2607-0129 <br>
+                    Copyrightⓒ2002-2022 MUSEO Corp. All RIGHTS RESERVED
+                    </p>
+                </div>
+                <div id="footer_customer">
+                    <h5>고객문의</h5>
+                    <img src="img/phone.png" alt="">
+                    <strong>1533-0918</strong>
+                    <p>AM 9:30 ~ PM 5:30  토, 일, 공휴일 휴무 <br> 
+                        점심시간 PM 12:00 ~ PM 1:00</p>
+                    <span>FAQ</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

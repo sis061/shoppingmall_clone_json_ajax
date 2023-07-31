@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+ /*--헤더 시작--*/
+        header {width: 1260px; height: 160px; margin: 0 auto;}
+        header > #header_box {width: 1260px; height: 97px; }
+        header > #header_box > #logo {width:220px ; height:40px ; float: left; margin:40px 0 10px 0;}
+        header > #header_box > #logo > img {width: 100%; height: 100%;}
+        header > #header_box > #searchbar {width: 350px; height: 50px; background-color: #F8F8F8; float: left; margin:40px 40px 10px 450px; border-radius: 5px;}
+        header > #header_box > #searchbar > input {float: left; width: 250px; height:50px; background-color: #F8F8F8; border:none; margin:0 0 0 30px; color: #999;}
+        header > #header_box > #searchbar > a > img {float: left; width: 27px; height: 27px; margin:10px 0 0 0;}
+
+        header > #header_box > #header_icon {width:200px; height: 50px; float: right; margin: 40px 0 10px 0;}
+        header > #header_box > #header_icon > a > img {float: left; width: 35px; height: 35px; margin:0 15px;}
+        
+        /*--헤더 목록--*/
+
+        header > #header_gnb {width: 1260px; height: 63px; }
+        header > #header_gnb > nav > a > img {float:left; width: 20px; height:20px;  margin: 25px 0 0px 0;}
+        header > #header_gnb > nav > ul > a > li {float:left; margin: 25px 25px 0 25px ; text-decoration: none; color: #3E3E3E; font-weight: bold;}
+        header > #header_gnb > nav > ul > a:first-of-type {float: left; margin: 0 0 0 -10px;}
+        
+        header > #header_gnb > #login > ul {float:left; margin: 23px 0 0 260px; font-size: 14px;}
+        header > #header_gnb > #login > ul > a > li {float:left; text-decoration: none; color: #373737; margin: 0 10px;}
+        header > #header_gnb > #login > ul > li {float:left; color: #F0F0F0;}
+
+        /*--헤더 끝--*/
+
+/*--푸터 시작--*/
+        footer {width: 100%; height: 823.86px; margin: 0 auto; background-color: #1F140E;}
+        footer > #footer_info {width: 100%; height: 79.91px; background-color: #EEEBE2; margin: 0 auto;}
+        footer > #footer_info > #info_box {width: 1260px; height: 80px; margin: 0 auto;}
+        footer > #footer_info > #info_box > h3 {float: left; width: 100px; height: 80px;  margin: auto; padding: 25px 10px 10px 0;}
+        footer > #footer_info > #info_box > ul {float: left; width: 1050px; height: 80px; overflow: hidden; text-decoration: none; }
+        footer > #footer_info > #info_box > ul > a {text-decoration: none; }
+        footer > #footer_info > #info_box > ul > a > li {color: #6E6E6E;  width: 1000px; height: 80px; margin: auto; padding: 25px 10px 10px 0; text-decoration: none; }
+        footer > #footer_info > #info_box > a {float: right; text-decoration: none; color: #000; margin: auto; padding: 25px 10px 10px 0;}
+        
+        footer > #footer_content {width: 100%; height: 544px;  margin: 0 auto; background-color: #1F140E;}
+        footer > #footer_content > #footer_contentbox {width: 1280px; height: 369px; margin: 85px auto;}
+        footer > #footer_content > #footer_contentbox > a {float: left;  }
+        footer > #footer_content > #footer_contentbox > a > img {float: left; width: 220px; height: 40px;}
+        footer > #footer_content > #footer_contentbox > #footer_icon {float: left; width: 220px; height: 40px;  margin: 70px 30px 0 -220px; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center}
+        footer > #footer_content > #footer_contentbox > #footer_nav {float: left; width: 700px; height: 50px;}
+        footer > #footer_content > #footer_contentbox > #footer_nav > ul {float: left;  text-decoration: none; }
+        footer > #footer_content > #footer_contentbox > #footer_nav > ul > a {text-decoration: none; }
+        footer > #footer_content > #footer_contentbox > #footer_nav > ul > a > li {color: #FFFFFF; float: left; margin: 0 10px;}
+        footer > #footer_content > #footer_contentbox > #footer_text {float: left;  width: 700px; height: 300px; margin: 20px 0 0 0 ;}
+        footer > #footer_content > #footer_contentbox > #footer_text > span {font-size: 17px; color: #888888;}
+        footer > #footer_content > #footer_contentbox > #footer_text > p {font-size: 13px; margin: 30px 0; line-height: 20px; color: #888888;}
+        footer > #footer_content > #footer_contentbox > #footer_customer {float: right;  text-align: right; height: 300px; margin: -30px 0 0 0;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > h5 {margin: 5px 0; color: #FFFFFF;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > img {width: 30px; height: 30px; color: #FFFFFF;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > strong {font-size: 30px; color: #FFFFFF;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > p {font-size: 13px; line-height: 20px; color: #888888;}
+        footer > #footer_content > #footer_contentbox > #footer_customer > span {float:right ;border: 1px solid #888888;; margin: 15px 0; padding: 5px 20px; border-radius: 50px; color: #888888;}
+        /*--푸터 끝--*/
