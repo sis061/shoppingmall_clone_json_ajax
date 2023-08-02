@@ -7,7 +7,134 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="css/common.css" rel="stylesheet">
-    <link href="css/sub.css" rel="stylesheet">    
+
+    <style>
+    * {box-sizing: border-box;}
+        section {width: 100%px; height: 15400px; border: 1px solid #000;}
+        #sub_content {width: 1260px; height: 858px; border: 1px solid #000; margin: 0 auto;}
+        /*--서브 상단 좌측 사진란--*/
+        #sub_main_img_top_left {width: 580px; height: 710px; background-color: gold; float: left; margin: 50px 0 0px 0;}
+        #sub_main_img_top_left > .imgbox {width: 580px; height: 580px; overflow: hidden; position: relative; border-radius: 5px; }
+        #sub_main_img_top_left > .imgbox > img {width: 580px; height: 580px; position: absolute; top: 0; left: 0;}
+
+        #sub_main_img_top_left > .sub_img_select {width: 580px; height: 148px; }
+        #sub_main_img_top_left > .sub_img_select > ul > li > button {background-color: #fff; border: none;}
+        #sub_main_img_top_left > .sub_img_select > ul > li > button:hover {cursor: pointer;}
+        #sub_main_img_top_left > .sub_img_select > ul > li > button > img {width: 110px; height: 110px; border-radius: 5px; margin: 20px 5px;}
+        #sub_main_img_top_left > .sub_img_select > ul > li:nth-of-type(1) {margin: 0 0 0 30px;}
+        #sub_main_img_top_left > .sub_img_select > ul > li > button > img:hover {border: 1px solid #000; cursor: pointer;}
+        
+        /*--서브 상단 우측 정보란--*/
+        #sub_main_top_right {width: 610px; height: 710px; background-color: green; float: right; margin: 50px 0 0 0;}
+        #sub_main_top_right > h1 {float: left; color: #000; margin: 10px 0 0 0; font-size: 25px; height:40px; font-weight:bold;}
+        #sub_main_top_right > span {float: left; color: #000; font-size: 30px; font-weight: bold;  width:205px; background-color: blue}
+        #sub_main_top_right > span::before {content:"68% "; color: #FF4438; ;}
+        #sub_main_top_right > p {float: left; color:#AEAEAE; font-size: 13px; margin: 15px 0 0 0 ; text-decoration: line-through;}
+        
+        #sub_main_deliver {float: left; width: 610px; height: 100px; margin: 25px 0; border-top: 1px solid #eee;}
+        #sub_main_deliver > tr, th, td {font-size: 15px; text-align: left; }
+        #sub_main_deliver th {float: left; padding: 25px 30px 0 0; color: #6E6E6E;}
+        #sub_main_deliver td input {background-color: #fff; border: 1px solid #eee; border-radius: 5px;}
+
+        #sub_main_option {float: left; width: 610px; height: 250px; background-color: palegoldenrod;}
+        #sub_main_option > dl, dt, dd {float: left; }
+        #sub_main_option > dl > dt {width: 100px; background-color: gold; font-size: 20px ; font-weight: bold; margin: 8px 0 0 0;}
+        #sub_main_option > dl > dd > select {width: 510px; padding: 10px 30px 10px 30px; background-color: #fff; border: 1px solid #eee; border-radius: 5px;}
+        #sub_main_item_option > option {float: left; font-size: 15px; border: 1px solid #eee; border-radius: 5px; box-shadow: 4px 4px 4px #eee; }
+        
+        #sub_main_item_cart {float: left; background-color : #E6E6E6; width: 610px; height: 100px; margin: 50px 0 0 0;}
+        #cart_tit {float: left; background-color: blue; margin: 20px 0 0 15px;}
+        #sub_main_item_cart > .cancel_btn {float: right; border: none; background-color: #E6E6E6; margin: 15px 15px 0 0; cursor: pointer;}
+        #count_box {float: left; background-color: gold; width: 150px; height: 40px; margin: 50px 0 0 -177px;}
+        #count_box > button {float: left; width: 29px; height: 29px; border: none; background-color: none; border-radius: 5px; margin: 5px; cursor: pointer;}
+        #count_box > .goodscount_text {float: left; width: 46px; height: 39px; border: 1px solid #eee; background-color: none; border-radius: 5px; text-align: center; }
+        .item_choice_price {float: right; margin: 60px -30px 0 0; font-size: 17px;}
+
+        #sub_main_sum {float: left; width: 610px; height: 80px; background-color: #fff;}
+        #sum_item_box {float: left; width: 610px;}
+        #sum_item_box > p {float: left; font-size: 15px;}
+        .sum_item {float:right; color:#AEAEAE;}
+        #sum_total_box {float: left; width: 610px; margin: 10px 0 0 0;}
+        #sum_total_box > h3 {float: left; font-weight: bold; margin: 10px 0 0 0;}
+        .sum_total {float:right; color: #DB6B30; font-size: 30px; font-weight: bold; }
+
+        #sub_main_btn {float: left; width: 610px; height: 80px; background-color: blue; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center;}
+        #sub_main_btn > .btn_icon {width: 70px; height: 70px; border: 1px solid #eee; border-radius: 5px; background-color: #fff; cursor: pointer;}
+        #sub_main_btn > .btn_cart {width: 220px; height: 70px; border: 1px solid #DB6B30; border-radius: 5px; background-color: #fff; color:#DB6B30; font-size:20px; font-weight:bold; cursor: pointer;}
+        #sub_main_btn > .btn_purchase {width: 220px; height: 70px; border: 1px solid #DB6B30; border-radius: 5px; background-color: #DB6B30; color: #fff; font-size:20px; font-weight:bold; cursor: pointer;}
+
+        /*--서브 네비 목록--*/
+        #sub_nav {width: 100%; height: 75px; float: left; border: 1px solid #000;}
+        #sub_nav > ul {width: 1260px; height: 74px; margin: 0 auto; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center;}
+        #sub_nav > ul > a, li {text-decoration: none; color: #6E6E6E ; float: left;;}
+        #sub_nav > ul > a > li {padding: 30px 73px; margin: 0; font-size: 17px; font-weight: bold;}
+        #sub_nav > ul > a:hover {border-bottom: 3px solid #DB6B30; color: #000;  box-sizing: border-box;}
+        #sub_nav > ul > a > li:hover {color: #000;}
+
+        /*--상품정보 이미지 나열--*/
+        #sub_item_info {width: 1260px; height: 11000px; border: 1px solid #000; margin: 0 auto;}
+        #sub_item_info > h3 {float: left; text-align: center; margin: 100px 0 50px 0px; background-color: gainsboro; width: 1260px; font-size: 17px;}
+        #sub_item_info > img {float: left; margin: 10px 0px 10px 200px;}
+
+        /*--상품필수정보 table--*/
+        #sub_item_mustknown {width: 1260px; height: 352px; border: 1px solid #000; margin: 0 auto;}
+        #sub_item_mustknown > h1 {font-weight: bold; font-size: 23px;}
+        #sub_item_mustknown > table {width: 1260px; height: 256px;}
+        .mustknown_th {width: 20%; padding: 20px 0 20px 10px; font-size: 14px; font-weight: bold; background-color: #F9F9F9; border: 1px solid lightgray; box-sizing: border-box; text-align: left;}
+        .mustknown_td {width: 30%; padding: 20px 0 20px 10px; font-size: 15px; color: #777777; border: 1px solid lightgray; box-sizing: border-box; text-align: left;}
+
+        /*--배송/교환/반품안내 시작--*/
+        #sub_item_deliver {width: 1260px; height: 686px; border: 1px solid #000; margin: 0 auto;}
+        #sub_item_exchange {width: 1260px; height: 629px; border: 1px solid #000; margin: 0 auto;}
+        #sub_item_refund {width: 1260px; height: 230px; border: 1px solid #000; margin: 0 auto;}
+        #sub_item_as {width: 1260px; height: 401px; border: 1px solid #000; margin: 0 auto;}
+
+        .sub_shipping_h1 {font-weight: bolder; font-size: 23px; line-height: 50px;}
+        .sub_shipping_h3 {font-weight: bolder; font-size: 17px; line-height: 25px;}
+        .sub_shipping_p {font-size: 17px; line-height: 30px;}
+
+        /*--상품 후기--*/
+        #sub_item_review {width: 1260px; height: 800.5px; border: 1px solid #000; margin: 0 auto; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center;}
+
+        .sub_review_h1 {font-weight: bolder; font-size: 23px; float: left; background-color: orange; float: left; margin: 20px 0 0 0;}
+        #btn_review_box {float:right;}
+        #btn_review_box > a {text-decoration: none; background-color:#DB6B30; padding: 13px 30px; font-size: 14px; color: #eee; font-weight: bold; border-radius: 20px; float: left; margin: 10px 0;}
+
+        #review_content {float: left; width: 1260px; height: 580px;}
+        #review_content > table {float: left; width: 1260px; height: 550px;}
+        .review_table_tr_top {border-top: 1px solid #000; box-sizing: border-box;}
+        .review_table_tr {border: 1px solid lightgray; box-sizing: border-box;}
+        #rating_star {background-image: url(img/icon_star_fill.png); float: left; width: 89px; height: 14px; margin: 20px 25px 12px 25px;}
+        #review_text {float: left; text-decoration: none; color: #000; font-size: 17px; margin: 18px 0px 12px 0; }
+        #write_info {float: right; color: #000; font-size: 17px; margin: 20px 60px 12px 0; background-color: beige; }
+        .btn_view_more {float: left; background-color: #fff; border: none; 
+            background-image: url(img/ico_review_see.png); background-repeat: no-repeat; background-position: right; width: 80px; background-color: skyblue;
+            text-align: left; font-size: 13px; color: #777777; margin: 0 0 12px 10px;}
+        .btn_view_more:hover {cursor: pointer;}
+
+        .pagnation {width: 1260px; height: 50px; background-color: gold; display:flex; flex-direction:row; flex-wrap:wrap; justify-content:space-between; align-content:center; }
+        .pagnation > ul {margin: 0 auto;}
+        .pagnation_select {padding: 10px 13.5px; background-color: #DB6B30; color: #fff; margin: 0 5px; border-radius: 100%;}
+        .pagnation_nonselect {padding: 10px 13.5px; background-color: #fff; margin: 0 5px; border-radius: 100%;}
+        .pagnation_nonselect > a {text-decoration: none; color: #000;}
+
+        /*--상품 문의--*/
+        #sub_item_request {width: 1260px; height: 380px; border: 1px solid #000; margin: 0 auto;}
+        /*--h1, 글쓰기 버튼 상품 후기와 스타일 동일--*/
+
+        #request_content {float: left; width: 1260px; height: 200px;}
+        #request_content > table {float: left; width: 1260px; height: 150px;}
+        .request_table_tr_top {border-top: 1px solid #000; box-sizing: border-box; font-weight: bold; }
+        .request_table_tr_top > th {text-align: center; padding: 30px 0 0 0;}
+        .request_table_tr {border: 1px solid lightgray; box-sizing: border-box;}
+        .request_table_tr > td {text-align: center; padding: 30px 0 0 0;}
+        .request_table_tr > td:nth-of-type(2) {text-align: left;}
+        .request_table_tr > td > a {text-decoration: none; color: #000;}
+        .btn_request_done {text-decoration: none; background-color:#DB6B30; padding: 5px 10px; font-size: 14px; color: #eee; font-weight: bold; border-radius: 5px; margin: 10px 0;}
+
+
+    </style>
+    
 </head>
 <body>
     <!--헤더-->
@@ -138,12 +265,12 @@
 
         <!-- 네비 목록 -->
         <div id="sub_nav">
-            <ul class="sub_nav_ul">
+            <ul>
                 <a href="#sub_item_info" target="_self"><li>상품정보</li></a>
-                <a href="#sub_item_mustknown" target="_self"><li >상품필수정보</li></a>
-                <a href="#sub_item_deliver" target="_self"><li >배송/교환/반품 안내</li></a>
-                <a href="#sub_item_review" target="_self"><li >상품후기 (19)</li></a>
-                <a href="#sub_item_request" target="_self"><li >상품문의 (1)</li></a>
+                <a href="#sub_item_mustknown" target="_self"><li>상품필수정보</li></a>
+                <a href="#sub_item_deliver" target="_self"><li>배송/교환/반품 안내</li></a>
+                <a href="#sub_item_review" target="_self"><li>상품후기 (19)</li></a>
+                <a href="#sub_item_request" target="_self"><li>상품문의 (1)</li></a>
             </ul>
         </div>
 
@@ -487,7 +614,7 @@
                 </table>
             </div>
             <div class="pagnation">
-                <ul class="pag_ul">
+                <ul>
                     <li class="pagnation_select">1</li>
                     <li class="pagnation_nonselect"><a href="">2</a></li>
                 </ul>
@@ -517,7 +644,7 @@
             </table>
         </div>
         <div class="pagnation">
-            <ul class="pag_ul">
+            <ul>
                 <li class="pagnation_select">1</li>
             </ul>
         </div>
