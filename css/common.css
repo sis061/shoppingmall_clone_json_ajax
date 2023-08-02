@@ -16,12 +16,17 @@
 
         header > #header_gnb {width: 1260px; height: 63px;}
         header > #header_gnb > nav > a > img {float:left; width: 20px; height:20px;  margin: 25px 0 0px 0;}
-        header > #header_gnb > nav > ul > a > li {float:left; margin: 25px 25px 0 25px ; text-decoration: none; color: #3E3E3E; font-weight: bold;}
-        header > #header_gnb > nav > ul > a:first-of-type {float: left; margin: 0 0 0 -10px;}
+        header > #header_gnb > nav > a > span {float: left; text-decoration: none; color: #3E3E3E; font-weight: bold; margin: 25px 25px 0 10px ;}
+        header > #header_gnb > nav > ul {float: left;}
+        header > #header_gnb > nav > ul > li {float:left; margin: 25px 25px 0 25px ; text-decoration: none; color: #3E3E3E; font-weight: bold;}
+        header > #header_gnb > nav > ul > li > a {text-decoration: none; color: #3E3E3E; }
+        header > #header_gnb > nav > ul > li > a:hover {color: #E16A2C;}
         
-        header > #header_gnb > #login > ul {float:left; margin: 23px 0 0 260px; font-size: 14px; width: 225px;}
-        header > #header_gnb > #login > ul > a > li {float:left; text-decoration: none; color: #373737; margin: 0 10px;}
-        header > #header_gnb > #login > ul > li {float:left; color: #F0F0F0;}
+        
+        header > #header_gnb > #login > #login_ul {float:left; margin: 23px 0 0 260px; font-size: 14px; width: 230px;}
+        header > #header_gnb > #login > #login_ul > li {float:left; margin: 0 5px;}
+        header > #header_gnb > #login > #login_ul > li > a {float:left; text-decoration: none; color: #373737; }
+        header > #header_gnb > #login > #login_ul > .login_vert_line {float:left; color: #F0F0F0;}
 
         /*--헤더 끝--*/
 
