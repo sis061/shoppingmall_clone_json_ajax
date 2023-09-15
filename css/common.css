@@ -1,15 +1,22 @@
 @charset "UTF-8";
 
+* {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-family: 'Roboto', sans-serif;
+}
+
 /*--헤더 시작--*/
 header {
-        width: 1260px;
+        width: 100%;
         height: 160px;
         margin: 0 auto;
 }
 
 #header_box {
-        width: 100%;
+        width: 1260px;
         height: 97px;
+        margin: 0 auto;
 }
 
 #logo {
@@ -19,7 +26,7 @@ header {
         margin: 40px 0 10px 0;
 }
 
-#logo>img {
+#logo a img {
         width: 100%;
         height: 100%;
 }
@@ -45,6 +52,7 @@ header {
         border: none;
         color: #999;
         outline: none;
+        font-size: 13px;
 }
 
 #searchbar a img {
@@ -74,8 +82,9 @@ header {
 /*--헤더 목록--*/
 
 #header_gnb {
-        width: 100%;
+        width: 1260px;
         height: 63px;
+        margin: 0 auto;
 
         display: flex;
         flex-flow: row;
@@ -88,49 +97,129 @@ header {
         flex-flow: row;
         justify-content: flex-start;
         align-items: center;
+        position: relative;
 
 }
 
-#header_gnb>nav>a>img {
+#header_gnb>nav>img {
         float: left;
         width: 20px;
         height: 20px;
         margin: 0 10px 0 0;
 }
 
-#header_gnb>nav>a>span {
+#header_gnb>nav>span {
         float: left;
         text-decoration: none;
         color: #3E3E3E;
         font-weight: bold;
         font-size: 15px;
-        margin: 3px 0 0 0;
+        margin: 1px 0 0 10px;
 }
 
-#header_gnb>nav>ul {
+#nav_top {
         display: flex;
         flex-flow: row;
         margin: 0 10px;
 }
 
-#header_gnb>nav>ul>li {
+#nav_top>li {
         margin: 0 25px;
         text-decoration: none;
         color: #3E3E3E;
         font-weight: bold;
 }
 
-#header_gnb>nav>ul>li>a {
+#nav_top>li>a {
         text-decoration: none;
         color: #3E3E3E;
         font-size: 15px;
 }
 
-#header_gnb>nav>ul>li>a:hover {
+#nav_top>li>a:hover {
         color: #E16A2C;
 }
 
-#login{
+#nav_slide_wrap {
+        display: none;
+        position: absolute;
+        top: 160px;
+        width: 100%;
+        height: auto;
+        background-color: #FDFDFD;
+        border-top: 1px solid #eee;
+        z-index: 500;
+}
+
+.categ_all:hover {
+        cursor: pointer;
+}
+
+#nav_slide {
+        width: 1260px;
+        margin: 0 auto;
+
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+}
+
+.nav_slide_title {
+        width: 170px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 30px;
+        padding: 15px 5px;
+}
+
+.nav_slide_arrow {
+        float: right;
+        font-size: 18px;
+        font-weight: lighter;
+        color: #6E6E6E;
+}
+
+.nav_slide_arrow a {
+        text-decoration: none;
+        color: #6E6E6E;
+}
+
+.nav_slide_sub {
+        font-size: 13px;
+        color: #6E6E6E;
+        font-weight: normal;
+        border-top: 1px solid #000;
+        margin-top: 10px;
+}
+
+.nav_slide_sub li {
+        margin: 20px 0;
+}
+
+.nav_slide_sub li a {
+        text-decoration: none;
+        color: #6E6E6E;
+}
+
+.nav_slide_sub li a:hover {
+        color: #E16A2C;
+}
+
+.icon_cancel {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        left: 1850px;
+        bottom: 500px;
+        opacity: 0.7;
+}
+
+.icon_cancel:hover {
+        cursor: pointer;
+}
+
+#login {
         width: 25%;
         display: flex;
         flex-flow: row;
@@ -191,17 +280,21 @@ footer {
         font-weight: bold;
 }
 
-#info_list {
-        float: left;
+.info_list_wrap {
         width: 1050px;
         height: 80px;
         overflow: hidden;
-        text-decoration: none;
+}
+
+#info_list {
+        width: 1050px;
+        height: 240px;
+
 }
 
 #info_list>li {
         width: 1000px;
-        height: 100%;
+        height: 80px;
 
         display: flex;
         align-items: center;
@@ -211,6 +304,7 @@ footer {
 #info_list li a {
         text-decoration: none;
         color: #6E6E6E;
+        font-weight: bold;
 }
 
 #info_box>a {
@@ -260,6 +354,7 @@ footer {
         float: left;
         width: 700px;
         height: 50px;
+        margin: 0 0 0 32px;
 }
 
 #footer_nav>ul {
@@ -276,17 +371,18 @@ footer {
         text-decoration: none;
         color: #FFFFFF;
         float: left;
+        font-size: 15px;
 }
 
 #footer_text {
         float: left;
         width: 700px;
         height: 300px;
-        margin: 20px 0 0 0;
+        margin: 20px 0 0 40px;
 }
 
 #footer_text>span {
-        font-size: 17px;
+        font-size: 18px;
         color: #888888;
 }
 
@@ -301,7 +397,7 @@ footer {
         float: right;
         text-align: right;
         height: 300px;
-        margin: -30px 0 0 0;
+        margin: -55px 0 0 0;
 }
 
 #footer_customer>h5 {
@@ -335,6 +431,10 @@ footer {
         padding: 5px 20px;
         border-radius: 50px;
         color: #888888;
+}
+
+#footer_customer>span:hover{
+        cursor: pointer;
 }
 
 /*--푸터 끝--*/

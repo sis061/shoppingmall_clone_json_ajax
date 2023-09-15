@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>커피박물관 카페뮤제오</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="css/common.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.4.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="js/category.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/main01.js"></script>
     <script src="js/main02.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/main03.js"></script>
+    <script src="js/main04.js"></script>
+    <script src="js/main05.js"></script>
+    <script src="js/main06.js"></script>
+    <script src="js/main07.js"></script>
+    <script src="js/main08.js"></script>
+    <script src="js/main09.js"></script>
+    <script src="js/footer_info_list_slider.js"></script>
+
 </head>
+
 <body>
     <!--헤더-->
     <header>
         <div id="header_box">
             <div id="logo">
-                <img src="img/logo.png" alt="로고">
+                <a href="index.html" target="_self"><img src="img/logo.png" alt="로고"></a>
             </div>
             <div id="searchbar">
                 <input type="text" name="search" placeholder="비알레띠">
@@ -33,8 +55,8 @@
 
         <div id="header_gnb">
             <nav>
-               <a href="#"><img src="img/menu.png" alt="전체카테고리"> <span>카테고리</span></a>
-                <ul>
+                <img src="img/menu.png" alt="전체카테고리" class="categ_all"> <span class="categ_all">카테고리</span>
+                <ul id="nav_top">
                     <li><a href="sub.html" target="_self">베스트</a></li>
                     <li><a href="sub.html" target="_self">신상품</a></li>
                     <li><a href="sub.html" target="_self">뮤제OH!특가</a></li>
@@ -55,16 +77,171 @@
             </div>
         </div>
 
+        <div id="nav_slide_wrap">
+            <ul id="nav_slide">
+                <li class="nav_slide_title"> 커피 <span class="nav_slide_arrow"><a href="sub.html"
+                            target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_01">
+                        <li><a href="#">스페셜티커피</a>
+                        <li>
+                        <li><a href="#">뮤제오블렌드</a>
+                        <li>
+                        <li><a href="#">싱글오리진</a>
+                        <li>
+                        <li><a href="#">아프리카</a>
+                        <li>
+                        <li><a href="#">아시아/태평양</a>
+                        <li>
+                        <li><a href="#">중남미</a>
+                        <li>
+                        <li><a href="#">디카페인</a>
+                        <li>
+                        <li><a href="#">추천세트</a>
+                        <li>
+                        <li><a href="#">카뮤 드립백</a>
+                        <li>
+                        <li><a href="#">카뮤 티백</a>
+                        <li>
+                        <li><a href="#">카뮤 캡슐</a>
+                        <li>
+                        <li><a href="#">카뮤 선물세트</a>
+                        <li>
+                        <li><a href="#">브랜드커피</a>
+                        <li>
+                    </ul>
+                    </a>
+                <li>
+
+                <li class="nav_slide_title"> 생두 <span class="nav_slide_arrow"><a href="sub.html"
+                            target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_02">
+                        <li><a href="#">아프리카</a>
+                        <li>
+                        <li><a href="#">중남미</a>
+                        <li>
+                        <li><a href="#">아시아 외</a>
+                        <li>
+                        <li><a href="#">디카페인</a>
+                        <li>
+                        <li><a href="#">뮤제오셀렉션</a>
+                        <li>
+                        <li><a href="#">생두자루/트레이</a>
+                        <li>
+                        <li><a href="#">커피봉투/스티커/기타</a>
+                        <li>
+                    </ul>
+                    </a>
+                <li>
+
+                <li class="nav_slide_title"> 핸드드립 <span class="nav_slide_arrow"><a href="sub.html"
+                            target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_03">
+                        <li><a href="#">드립세트</a>
+                        <li>
+                        <li><a href="#">드리퍼</a>
+                        <li>
+                        <li><a href="#">여과지</a>
+                        <li>
+                        <li><a href="#">드립서버</a>
+                        <li>
+                        <li><a href="#">드립포트</a>
+                        <li>
+                        <li><a href="#">핸드밀</a>
+                        <li>
+                        <li><a href="#">전동 핸드밀</a>
+                        <li>
+                        <li><a href="#">드립/드립백 거치대</a>
+                        <li>
+                        <li><a href="#">더치/워터드립</a>
+                        <li>
+                    </ul>
+                    </a>
+                <li>
+
+                <li class="nav_slide_title"> 커피추출용품 <span class="nav_slide_arrow"><a href="sub.html"
+                            target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_04">
+                        <li><a href="#">포카포트</a>
+                        <li>
+                        <li><a href="#">아웃도어용 추출기</a>
+                        <li>
+                        <li><a href="#">에어로프레스</a>
+                        <li>
+                        <li><a href="#">프렌치프레스</a>
+                        <li>
+                        <li><a href="#">침출식</a>
+                        <li>
+                        <li><a href="#">사이폰</a>
+                        <li>
+                        <li><a href="#">소모품/부품</a>
+                        <li>
+                        <li><a href="#">가스켓</a>
+                        <li>
+                        <li><a href="#">그 외</a>
+                        <li>
+                    </ul>
+                    </a>
+                <li>
+
+                <li class="nav_slide_title"> 잔/텀블러 <span class="nav_slide_arrow"><a href="sub.html"
+                            target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_05">
+                        <li><a href="#">에스프레소잔</a>
+                        <li>
+                        <li><a href="#">카푸치노잔</a>
+                        <li>
+                        <li><a href="#">카페라떼잔</a>
+                        <li>
+                        <li><a href="#">찻잔</a>
+                        <li>
+                        <li><a href="#">머그잔</a>
+                        <li>
+                        <li><a href="#">유리컵</a>
+                        <li>
+                        <li><a href="#">와인/고블렛잔</a>
+                        <li>
+                        <li><a href="#">리유저블컵</a>
+                        <li>
+                        <li><a href="#">보온보냉 텀블러</a>
+                        <li>
+                        <li><a href="#">기타 잔</a>
+                        <li>
+                    </ul>
+                    </a>
+                <li>
+
+                <li class="nav_slide_title"> 바리스타/카페용품 <span class="nav_slide_arrow"><a href="sub.html"
+                            target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_06">
+                        <li><a href="#">탬퍼</a>
+                        <li>
+                        <li><a href="#">머신 액세서리</a>
+                        <li>
+                        <li><a href="#">머신 클리너</a>
+                        <li>
+                        <li><a href="#">스팀피처</a>
+                        <li>
+                        <li><a href="#">진동벨</a>
+                        <li>
+                        <li><a href="#">도서</a>
+                        <li>
+
+                    </ul>
+                </li>
+            </ul>
+            <img src="img/cancel.png" alt="닫기" class="icon_cancel">
+        </div>
+
     </header>
 
     <!--슬라이더-->
-    <div id="slider">
-        <a href="sub.html" target="_self"><img src="img/slider_01.jpg" alt="슬라이더1"></a>
+    <div id="sliderwrap">
+        <ul class="slider"></ul>
     </div>
 
     <!--메인-->
     <main>
-    <!--메인 상단 아이콘-->
+        <!--메인 상단 아이콘-->
         <div id="main_icon">
             <div class="main_iconbox">
                 <a href="sub.html" target="_self">
@@ -118,7 +295,7 @@
                 <a href="sub.html" target="_self">
                     <img src="" alt="관련" class="main_icon_img">
                     <span class="main_icon_text"></span>
-                </a> 
+                </a>
             </div>
             <div class="main_iconbox">
                 <a href="sub.html" target="_self">
@@ -143,10 +320,12 @@
 
         <!--메인 타임특가-->
         <div id="main_timesale">
-            <a href="sub.html" target="_self"><img src="img/timesale box.jpg" alt="타임특가 로고"></a>
-            <!-- 아래 h1 : 디데이 카운트, 나중에 자바로 만들것-->
-            <h1> nn일 hh : mm : ss </h1>
+            <img src="img/timesale box.jpg" alt="타임특가 로고">
 
+            <div id="timesale_clock">
+                <img src="img/icon_clock.png" alt="" class="icon_clock">
+                <h1 id="remain_time"></h1>
+            </div>
             <div id="timesale_box">
                 <div class="timesale_product"></div>
                 <div class="timesale_product"></div>
@@ -154,145 +333,57 @@
             </div>
         </div>
         <!--메인 베너 1-->
-        <!--베너 이동 나중에 자바로 만들것-->
-        <div id="main_ban1">
-            <a href="sub.html" target="_self"><img src="img/ban1_01.jpg" alt="메인 베너1"></a>
+        <div class="banner_wrap">
+            <ul class="main_ban" id="main_ban01">
+                <li><a href="sub.html" target="_self"><img src="img/ban1_01.jpg" alt="메인 베너1"></a></li>
+                <li><a href="sub.html" target="_self"><img src="img/ban1_02.jpg" alt="메인 베너1"></a></li>
+                <li><a href="sub.html" target="_self"><img src="img/ban1_03.jpg" alt="메인 베너1"></a></li>
+            </ul>
         </div>
 
         <!--뮤제오에만 있어요-->
         <div id="main_only">
             <h1>뮤제오에만 있어요</h1>
             <div id="only_productbox">
-            <div class="only_product">
-                <a href="sub.html" target="_self"><img src="img/only_01.jpg" alt="드립백"></a>
-                    <a href="sub.html" target="_self"><h3>카페뮤제오 에티오피아 디카페인<br> 드립백 72개입</h3></a>
-                    <a href="sub.html" target="_self"><span id="only_01">59,800원</span></a>
-                    <a href="sub.html" target="_self"><p>93,600원</p></a>
+                <div class="only_product"></div>
+                <div class="only_product"></div>
+                <div class="only_product"></div>
+                <div class="only_product"></div>
+                <div class="only_product"></div>
             </div>
-            <div class="only_product">
-                <a href="sub.html" target="_self"><img src="img/only_02.jpg" alt="선물세트"></a>
-                    <a href="sub.html" target="_self"><h3>갓볶은 커피 세계 3대 커피 <br> 선물세트 (100gx3)</h3></a>
-                    <a href="sub.html" target="_self"><span id="only_02">58,000원</span></a>
-                    <a href="sub.html" target="_self"><p>63,400원</p></a>
-            </div>
-            <div class="only_product">
-                <a href="sub.html" target="_self"><img src="img/only_03.jpg" alt="케멕스 드립"></a>
-                    <a href="sub.html" target="_self"><h3>케멕스 클래식 홈카페 <br> 핸드드립세트 3컵</h3></a>
-                    <a href="sub.html" target="_self"><span id="only_03">94,800원</span></a>
-                    <a href="sub.html" target="_self"><p>158,000</p></a>
-            </div>
-            <div class="only_product">
-                <a href="#"><img src="img/only_04.jpg" alt="아벤시 컵"></a>
-                    <a href="#"><h3>아이코사 브루하우스 아벤시 <br> 글래스컵 세트 3종</h3></a>
-                    <a href="#"><span id="only_04">89,000원</span></a>
-                    <a href="#"><p>105,000원</p></a>
-            </div>
-            <div class="only_product">
-                <a href="#"><img src="img/only_05.jpg" alt="리쉬티 티백"></a>
-                    <a href="#"><h3>리쉬티 뮤제오 x 리쉬티 <br> 버라이어티팩 10티백</h3></a>
-                    <a href="#"><span>22,000원</span></a>
-                    <a href="#"><p>22,000원</p></a>
-            </div>
-             </div>
             <div id="only_productbox">
-            <div class="only_product">
-                <a href="#"><img src="img/only_06.jpg" alt="샤또 수저"></a>
-                    <a href="#"><h3>러브라믹스 샤또 디너 세트 골드 <br> 3PCS</h3></a>
-                    <a href="#"><span id="only_06">35,700원</span></a>
-                    <a href="#"><p>53,000원</p></a>
-            </div>
-            <div class="only_product">
-                <a href="#"><img src="img/only_07.jpg" alt="플라멩코 캡슐"></a>
-                    <a href="#"><h3>카페뮤제오 스페셜티 캡슐 커피 <br> 플라멩코 100개입</h3></a>
-                    <a href="#"><span id="only_07">75,000원</span></a>
-                    <a href="#"><p>89,000원</p></a>
-            </div>
-            <div class="only_product">
-                <a href="#"><img src="img/only_08.jpg" alt="비알레띠 레드"></a>
-                    <a href="#"><h3>비알레띠 모카 익스프레스 I <br> LOVE COFFEE 레드 3컵</h3></a>
-                    <a href="#"><span id="only_08">51,000원</span></a>
-                    <a href="#"><p>60,000원</p></a>
-            </div>
-            <div class="only_product">
-                <a href="#"><img src="img/only_09.jpg" alt="비알레띠 블랙"></a>
-                    <a href="#"><h3>비알레띠 뉴 브리카 매트블랙 2컵</h3></a>
-                    <a href="#"><span id="only_09">59,400원</span></a>
-                    <a href="#"><p>82,000원</p></a>
-            </div>
-            <div class="only_product">
-                <a href="#"><img src="img/only_10.jpg" alt="아람 커피메이커"></a>
-                    <a href="#"><h3>아람 커피메이커 스탠드 세트 - <br> 타타주바 옐로우</h3></a>
-                    <a href="#"><span id="only_10">748,000원</span></a>
-                    <a href="#"><p>800,000원</p></a>
-            </div>
+                <div class="only_product"></div>
+                <div class="only_product"></div>
+                <div class="only_product"></div>
+                <div class="only_product"></div>
+                <div class="only_product"></div>
             </div>
         </div>
 
         <!--md 추천-->
         <div id="main_md">
             <h1>MD 추천상품</h1>
-        <!--나중에 자바로 만들것-->
-            <div id="md_box">
-                <div class="item_box">
-                    <a href="sub.html" target="_self"><img src="img/md_01.jpg" alt=""></a>
-                    <a href="sub.html" target="_self"><h3>갓볶은커피 사무실커피 추천세트 3kg (1kgx3)</h3></a>
-                    <span id="md_01">66,500원</span>
-                    <p>210,000원</p>
-                </div>
-                
-                <div class="item_box">
-                    <a href="sub.html" target="_self"><img src="img/md_02.jpg" alt=""></a>
-                    <a href="sub.html" target="_self"><h3>일사 에볼루션 밀크저그 3컵 350cc 레인보우</h3></a>
-                    <span id="md_02">39,000원</span>
-                    <p> 45,000원</p>
-                </div>
-                  
-                <div class="item_box">
-                    <a href="sub.html" target="_self"><img src="img/md_03.jpg" alt=""></a>
-                    <a href="sub.html" target="_self"><h3>케멕스 케메어 CM-AER8 (8cup)Chemex</h3></a>
-                    <span id="md_03">79,200원</span>
-                    <p>110,000원</p>
-                </div>
-                       
-                <div class="item_box">
-                    <a href="sub.html" target="_self"><img src="img/md_04.jpg" alt=""></a>
-                    <a href="sub.html" target="_self"><h3>마리슈타이거 루미 무선 충전식 그라인더 S60</h3></a>
-                    <span id="md_04">42,500원</span>
-                    <p>62,000원</p>
-                </div>
-                            
-                <div class="item_box">
-                    <a href="sub.html" target="_self"><img src="img/md_05.jpg" alt=""></a>
-                    <a href="sub.html" target="_self"><h3>와카코 피코프레소 (파우치 포함)</h3></a>
-                    <span id="md_05">166,000원</span>
-                    <p>198,000원</p>
-                </div>
+            <div class="md_box_slide_wrap">
+                <ul class="md_box_slide">
+                    <li class="item_box"></li>
+                    <li class="item_box"></li>
+                    <li class="item_box"></li>
+                    <li class="item_box"></li>
+                    <li class="item_box"></li>
+                    <li class="item_box"></li>
+                </ul>
             </div>
-        
-
+            <div class="btn_wrap">
+                <span class="prev">&lt;</span>
+                <span class="next">&gt;</span>
+            </div>
         </div>
-           <!--이벤트 섹션-->
+        <!--이벤트 섹션-->
         <div id="main_event">
             <h1>카뮤 이벤트</h1>
             <div id="event_box">
-                <div class="event_product">
-                    <a href="sub.html" target="_self" ><img src="img/event_big1.jpg" alt="아임요 사은품" class="event_big"></a>
-                    <a href="sub.html" target="_self" ><img src="img/event_1_1.jpg" alt="아임요 청포도" class="event_small"></a>
-                    <a href="sub.html" target="_self"><h3>아임요 청포도 베이스 1kg</h3></a>
-                    <a href="sub.html" target="_self"><span id="event_1_1">9,100원</span></a>
-                    <a href="sub.html" target="_self"><p>12,000원</p></a>
-                    <a href="sub.html" target="_self"><img src="img/heart.png" alt="찜 아이콘" class="event_icon1"></a>
-                    <a href="sub.html" target="_self"><img src="img/cart.png" alt="장바구니 아이콘" class="event_icon2"></a>
-                </div>
-                <div class="event_product">
-                    <a href="sub.html" target="_self"><img src="img/event_big2.jpg" alt="오르카 캡슐" class="event_big"></a>
-                    <a href="sub.html" target="_self"><img src="img/event_2_1.jpg" alt="오르카 10개입" class="event_small"></a>
-                    <a href="sub.html" target="_self"><h3>카페뮤제오 캡슐커피 오르카 10개입(1+1 행사)</h3></a>
-                    <a href="sub.html" target="_self"><span>6,900원</span></a>
-                    <a href="sub.html" target="_self"><p>6,900원</p></a>
-                    <a href="sub.html" target="_self"><img src="img/heart.png" alt="찜 아이콘" class="event_icon1"></a>
-                    <a href="sub.html" target="_self"><img src="img/cart.png" alt="장바구니 아이콘" class="event_icon2"></a>
-                </div>
+                <div class="event_product"></div>
+                <div class="event_product"></div>
             </div>
         </div>
         <!--카테고리 추천-->
@@ -300,102 +391,59 @@
             <h1>카테고리 추천 아이템</h1>
             <div id="rec_nav">
                 <ul>
-                    <li><a href="sub.html" target="_self">모카포트</a></li>
-                    <li><a href="sub.html" target="_self">갓볶은커피</a></li>
-                    <li><a href="sub.html" target="_self">드립용품</a></li>
-                    <li><a href="sub.html" target="_self">에스프레소잔</a></li>
-                    <li><a href="sub.html" target="_self">그라인더</a></li>
-                    <li><a href="sub.html" target="_self">시럽/소스</a></li>
-                    <li><a href="sub.html" target="_self">테이크아웃</a></li>
-                    <li><a href="sub.html" target="_self">바리스타</a></li>
+                    <li class="rec_nav_01">모카포트</li>
+                    <li class="rec_nav_02">갓볶은커피</li>
+                    <li>드립용품</li>
+                    <li>에스프레소잔</li>
+                    <li>그라인더</li>
+                    <li>시럽/소스</li>
+                    <li>테이크아웃</li>
+                    <li>바리스타</li>
                 </ul>
             </div>
-            <div class="rec_productbox">
-            <div class="rec_product">
-                <a href="sub.html" target="_self"><img src="img/rec_01.jpg" alt="비알레띠 모카포트"></a>
-                    <a href="sub.html" target="_self"><h3>비알레띠 뉴 브리카 모카포트 2컵  </h3></a>
-                    <a href="sub.html" target="_self"><span id="rec_01">52,800원 </span></a>
-                    <a href="sub.html" target="_self"><p>77,000원</p></a>
+            <div class="rec_productbox" id="rec_box_01">
+                <div class="rec_product"></div>
+                <div class="rec_product"></div>
+                <div class="rec_product"></div>
+                <div class="rec_product"></div>
+                <div class="rec_product"></div>
             </div>
-            <div class="rec_product">
-                <a href="sub.html" target="_self"><img src="img/rec_02.jpg" alt="비알레띠 올리브그린"></a>
-                    <a href="sub.html" target="_self"><h3>비알레띠 뉴 브리카 올리브그린 <br> 2컵</h3></a>
-                    <a href="sub.html" target="_self"><span id="rec_02">59,400원</span></a>
-                    <a href="sub.html" target="_self"><p>82,000원</p></a>
+            <div class="rec_productbox" id="rec_box_02">
+                <div class="rec_product"></div>
+                <div class="rec_product"></div>
+                <div class="rec_product"></div>
+                <div class="rec_product"></div>
+                <div class="rec_product"></div>
             </div>
-            <div class="rec_product">
-                <a href="sub.html" target="_self"><img src="img/rec_03.jpg" alt="비알레띠 인덕션"></a>
-                    <a href="sub.html" target="_self"><h3>비알레띠 브리카 인덕션 4컵 </h3></a>
-                    <a href="sub.html" target="_self"><span id="rec_03">77,000원 </span></a>
-                    <a href="sub.html" target="_self"><p>130,000원</p></a>
-            </div>
-            <div class="rec_product">
-                <a href="sub.html" target="_self"><img src="img/rec_04.jpg" alt="모카포트 블렌드"></a>
-                    <a href="sub.html" target="_self"><h3>갓볶은커피 모카포트 블렌드  </h3></a>
-                    <a href="sub.html" target="_self"><span id="rec_04">6,000원</span></a>
-                    <a href="sub.html" target="_self"><p>7,000원</p></a>
-            </div>
-            <div class="rec_product">
-                <a href="sub.html" target="_self"><img src="img/rec_05.jpg" alt="저장용기"></a>
-                    <a href="sub.html" target="_self"><h3>비알레띠 글래스 커피 저장 용기 </h3></a>
-                    <a href="sub.html" target="_self"><span>24,900원</span></a>
-                    <a href="sub.html" target="_self"><p>30,000원</p></a>
-            </div>
-        </div>
         </div>
 
         <!--메인 베너 2-->
-        <!--베너 이동 나중에 자바로 만들것-->
 
-        <div id="main_ban2">
-        <a href="sub.html" target="_self"><img src="img/ban2_01.jpg" alt="메인 베너2"></a>
+        <div class="banner_wrap">
+            <ul class="main_ban" id="main_ban02">
+                <li><a href="sub.html" target="_self"><img src="img/ban2_01.jpg" alt="메인 베너2"></a></li>
+                <li><a href="sub.html" target="_self"><img src="img/ban2_02.jpg" alt="메인 베너2"></a></li>
+                <li><a href="sub.html" target="_self"><img src="img/ban2_03.jpg" alt="메인 베너2"></a></li>
+            </ul>
         </div>
-        
+
         <!--새로 나왔어요-->
         <div id="main_new">
             <h1>새로 나왔어요</h1>
-            <a href="sub.html" target="_self"><img src="img/new_big_01.jpg" alt="신상품 대형"></a>
-            <!--좌우 이동 나중에 자바로 만들것-->
-            <div class="new_productbox">
-                <div class="new_product">
-                    <a href="sub.html" target="_self"><img src="img/new_01.jpg" alt="온두라스 렘피라 오바타"></a>
-                        <a href="sub.html" target="_self"><h3>갓볶은커피 온두라스 렘피라 <br> 오바타  </h3></a>
-                        <a href="sub.html" target="_self"><span id="new_01">7,500원 </span></a>
-                        <a href="sub.html" target="_self"><p>8,500원</p></a>
-                        <img src="img/icon_new.gif" alt="신상품" class="newicon">
+            <div class="main_new_wrap">
+                <div class="new_product_big_wrap">
+                    <ul class="new_product_big_slide">
+                        <li><a href="sub.html" target="_self"><img src="img/new_big_01.jpg" alt="신상품 대형"></a></li>
+                        <li><a href="sub.html" target="_self"><img src="img/new_big_02.jpg" alt="신상품 대형"></a></li>
+                    </ul>
                 </div>
-                <div class="new_product">
-                    <a href="sub.html" target="_self"><img src="img/new_02.jpg" alt="라파엘 워시드 (워터멜론)"></a>
-                        <a href="sub.html" target="_self"><h3>생두 콜롬비아 산 라파엘 워시드 (워터멜론)</h3></a>
-                        <a href="sub.html" target="_self"><span>24,000원</span></a>
-                        <a href="sub.html" target="_self"><p>24,000원</p></a>
-                        <img src="img/icon_taxfree.gif" alt="면세" class="newicon">
-                </div>
-                <div class="new_product">
-                    <a href="#"><img src="img/new_03.jpg" alt="폰타노 도징링"></a>
-                        <a href="#"><h3>폰타노 도징링 58mm - 블랙 </h3></a>
-                        <a href="#"><span id="new_03">9,900원 </span></a>
-                        <a href="#"><p>15,000원</p></a>
-                        <img src="img/icon_event.gif" alt="이벤트" class="newicon">
-                </div>
-                <div class="new_product">
-                    <a href="#"><img src="img/new_04.jpg" alt="폰타노 도징컵"></a>
-                        <a href="#"><h3>폰타노 도징컵 58mm - 블랙  </h3></a>
-                        <a href="#"><span id="new_04">21,000원 </span></a>
-                        <a href="#"><p>30,000원</p></a>
-                        <img src="img/icon_event.gif" alt="이벤트" class="newicon">
-                </div>
-                <div class="new_product">
-                    <a href="#"><img src="img/new_05.jpg" alt="안캅 에덱스 카푸치노"></a>
-                        <a href="#"><h3>안캅 에덱스 카푸치노 에볼루션 그린 190ml</h3></a>
-                        <a href="#"><span id="new_05">35,000원</span></a>
-                        <a href="#"><p>40,000원</p></a>
-                </div>
-                <div class="new_product">
-                    <a href="#"><img src="img/new_06.jpg" alt="일사 에볼루션 밀크저그"></a>
-                        <a href="#"><h3>일사 에볼루션 밀크저그 9컵 750cc 동 </h3></a>
-                        <a href="#"><span id="new_06">53,000원 </span></a>
-                        <a href="#"><p>60,000원</p></a>
+                <div class="new_productbox">
+                    <div class="new_product"></div>
+                    <div class="new_product"></div>
+                    <div class="new_product"></div>
+                    <div class="new_product"></div>
+                    <div class="new_product"></div>
+                    <div class="new_product"></div>
                 </div>
             </div>
         </div>
@@ -404,36 +452,15 @@
         <div id="main_video">
             <h1>뮤제오 TV</h1>
             <div id="vidbox">
-            <div class="vidbox_item">
-                <a href="sub.html" target="_self"><img src="img/vid_01.jpg" alt="페이마 690N"></a>
-                <p>홈카페 전동 그라인더 신상 언박싱!</p>
-                <h3>페이마 690N 멀티프로 안티스테틱</h3>
-            </div>
-            <div class="vidbox_item">
-                <a href="#"><img src="img/vid_02.jpg" alt="와카코 NS2"></a>
-                <p>와.카.코의 뉴페이스!</p>
-                <h3>와카코 미니프레소 NS2</h3>
-            </div>
+                <div class="vidbox_item"></div>
+                <div class="vidbox_item"></div>
             </div>
         </div>
 
         <!--브랜드관-->
         <div id="main_brand">
             <h1>브랜드관</h1>
-            <div id="brandbox">
-                <a href="sub.html" target="_self"><img src="img/brand_ban01.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand_ban02.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand_ban03.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand_ban04.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand_ban05.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand_ban06.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand_ban07.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand08_aram.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand09_ifyoucare.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand10_keepcup.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand11_airflow.png" alt=""></a>
-                <a href="sub.html" target="_self"><img src="img/brand12_wacaco.png" alt=""></a>
-            </div>
+            <div class="brandbox"> </div>
         </div>
     </main>
 
@@ -442,12 +469,14 @@
         <div id="footer_info">
             <div id="info_box">
                 <h3>NOTICE</h3>
-                <ul id="info_list">
-                    <!--리스트 이동 나중에 자바로 만들기-->
-                    <li><a href="#">카페뮤제오 휴무 공지(5월)</a></li>
-                    <li><a href="#">2024 설 연휴 배송 공지 </a></li>
-                    <li><a href="#">4월 25일(화) 고객 상담시간 변경 안내</a></li>
-                </ul>
+                <div class="info_list_wrap">
+                    <ul id="info_list">
+                        <!--리스트 이동 나중에 자바로 만들기-->
+                        <li><a href="#">카페뮤제오 휴무 공지(5월)</a></li>
+                        <li><a href="#">2024 설 연휴 배송 공지 </a></li>
+                        <li><a href="#">4월 25일(화) 고객 상담시간 변경 안내</a></li>
+                    </ul>
+                </div>
                 <a href="#">더보기 <span style="font-weight: bold;">></span></a>
             </div>
         </div>
@@ -475,20 +504,20 @@
                     <span>빨리 가기보다는 조금 늦더라도 멀리 보겠습니다. 신뢰를 바탕으로 실력을 쌓아갑니다.</span>
 
                     <p>(주)뮤제오 | 대표:서동의 <br>
-                    본사 : 서울특별시 성동구 연무장5가길 25 (성수역 SK V1 Tower) 1110~1112호 <br>
-                    로스팅, 물류센터:경기도 용인시 처인구 경안천로 256번길 69 <br>
-                    통신판매업신고번호:2021-서울성동-01241 | 개인정보보호책임자:최동환 <br>
-                    사업자등록번호:117-81-58115 <br>
-                    이메일:mail@museo.co.kr | 사업자,대량주문:sale@museo.co.kr <br>
-                    팩스:02-2607-0129 <br>
-                    Copyrightⓒ2002-2022 MUSEO Corp. All RIGHTS RESERVED
+                        본사 : 서울특별시 성동구 연무장5가길 25 (성수역 SK V1 Tower) 1110~1112호 <br>
+                        로스팅, 물류센터:경기도 용인시 처인구 경안천로 256번길 69 <br>
+                        통신판매업신고번호:2021-서울성동-01241 | 개인정보보호책임자:최동환 <br>
+                        사업자등록번호:117-81-58115 <br>
+                        이메일:mail@museo.co.kr | 사업자,대량주문:sale@museo.co.kr <br>
+                        팩스:02-2607-0129 <br>
+                        Copyrightⓒ2002-2022 MUSEO Corp. All RIGHTS RESERVED
                     </p>
                 </div>
                 <div id="footer_customer">
                     <h5>고객문의</h5>
                     <img src="img/phone.png" alt="">
                     <strong>1533-0918</strong>
-                    <p>AM 9:30 ~ PM 5:30  토, 일, 공휴일 휴무 <br> 
+                    <p>AM 9:30 ~ PM 5:30 토, 일, 공휴일 휴무 <br>
                         점심시간 PM 12:00 ~ PM 1:00</p>
                     <span>FAQ</span>
                 </div>
@@ -496,4 +525,5 @@
         </div>
     </footer>
 </body>
+
 </html>

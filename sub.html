@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="css/common.css" rel="stylesheet">
     <link href="css/sub.css" rel="stylesheet">    
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <script src="js/category.js"></script>
+    <script src="js/footer_info_list_slider.js"></script>
 </head>
 <body>
     <!--헤더-->
     <header>
         <div id="header_box">
             <div id="logo">
-                <a href="index.html" target="_self"><img src="img/logo.png" alt="로고"> </a>
+                <a href="index.html" target="_self"><img src="img/logo.png" alt="로고"></a>
             </div>
             <div id="searchbar">
                 <input type="text" name="search" placeholder="비알레띠">
@@ -29,15 +33,15 @@
 
         <div id="header_gnb">
             <nav>
-               <a href="#"><img src="img/menu.png" alt="전체카테고리"> <span>카테고리</span></a>
-               <ul>
-                <li style="color:#E16A2C;">베스트</li>
-                <li><a href="sub.html" target="_self">신상품</a></li>
-                <li><a href="sub.html" target="_self">뮤제OH!특가</a></li>
-                <li><a href="sub.html" target="_self">커뮤니티</a></li>
-                <li><a href="sub.html" target="_self">이벤트</a></li>
-                <li><a href="sub.html" target="_self">브랜드</a></li>
-            </ul>
+                <img src="img/menu.png" alt="전체카테고리" class="categ_all"> <span class="categ_all">카테고리</span>
+                <ul id="nav_top">
+                    <li><a href="sub.html" target="_self">베스트</a></li>
+                    <li><a href="sub.html" target="_self">신상품</a></li>
+                    <li><a href="sub.html" target="_self">뮤제OH!특가</a></li>
+                    <li><a href="sub.html" target="_self">커뮤니티</a></li>
+                    <li><a href="sub.html" target="_self">이벤트</a></li>
+                    <li><a href="sub.html" target="_self">브랜드</a></li>
+                </ul>
             </nav>
 
             <div id="login">
@@ -49,6 +53,96 @@
                     <li><a href="#">고객문의</a></li>
                 </ul>
             </div>
+        </div>
+
+        <div id="nav_slide_wrap">
+            <ul id="nav_slide">
+                <li class="nav_slide_title"> 커피 <span class="nav_slide_arrow"><a href="sub.html" target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_01">
+                        <li><a href="#">스페셜티커피</a><li>
+                        <li><a href="#">뮤제오블렌드</a><li>
+                        <li><a href="#">싱글오리진</a><li>
+                        <li><a href="#">아프리카</a><li>
+                        <li><a href="#">아시아/태평양</a><li>
+                        <li><a href="#">중남미</a><li>
+                        <li><a href="#">디카페인</a><li>
+                        <li><a href="#">추천세트</a><li>
+                        <li><a href="#">카뮤 드립백</a><li>
+                        <li><a href="#">카뮤 티백</a><li>
+                        <li><a href="#">카뮤 캡슐</a><li>
+                        <li><a href="#">카뮤 선물세트</a><li>
+                        <li><a href="#">브랜드커피</a><li>
+                    </ul>
+                </a><li>
+
+                <li class="nav_slide_title"> 생두 <span class="nav_slide_arrow"><a href="sub.html" target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_02">
+                        <li><a href="#">아프리카</a><li>
+                        <li><a href="#">중남미</a><li>
+                        <li><a href="#">아시아 외</a><li>
+                        <li><a href="#">디카페인</a><li>
+                        <li><a href="#">뮤제오셀렉션</a><li>
+                        <li><a href="#">생두자루/트레이</a><li>
+                        <li><a href="#">커피봉투/스티커/기타</a><li>
+                    </ul>
+                </a><li>
+
+                <li class="nav_slide_title"> 핸드드립 <span class="nav_slide_arrow"><a href="sub.html" target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_03">
+                        <li><a href="#">드립세트</a><li>
+                        <li><a href="#">드리퍼</a><li>
+                        <li><a href="#">여과지</a><li>
+                        <li><a href="#">드립서버</a><li>
+                        <li><a href="#">드립포트</a><li>
+                        <li><a href="#">핸드밀</a><li>
+                        <li><a href="#">전동 핸드밀</a><li>
+                        <li><a href="#">드립/드립백 거치대</a><li>
+                        <li><a href="#">더치/워터드립</a><li>
+                    </ul>
+                </a><li>
+
+                <li class="nav_slide_title"> 커피추출용품 <span class="nav_slide_arrow"><a href="sub.html" target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_04">
+                        <li><a href="#">포카포트</a><li>
+                        <li><a href="#">아웃도어용 추출기</a><li>
+                        <li><a href="#">에어로프레스</a><li>
+                        <li><a href="#">프렌치프레스</a><li>
+                        <li><a href="#">침출식</a><li>
+                        <li><a href="#">사이폰</a><li>
+                        <li><a href="#">소모품/부품</a><li>
+                        <li><a href="#">가스켓</a><li>
+                        <li><a href="#">그 외</a><li>
+                    </ul>
+                </a><li>
+
+                <li class="nav_slide_title"> 잔/텀블러 <span class="nav_slide_arrow"><a href="sub.html" target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_05">
+                        <li><a href="#">에스프레소잔</a><li>
+                        <li><a href="#">카푸치노잔</a><li>
+                        <li><a href="#">카페라떼잔</a><li>
+                        <li><a href="#">찻잔</a><li>
+                        <li><a href="#">머그잔</a><li>
+                        <li><a href="#">유리컵</a><li>
+                        <li><a href="#">와인/고블렛잔</a><li>
+                        <li><a href="#">리유저블컵</a><li>
+                        <li><a href="#">보온보냉 텀블러</a><li>
+                        <li><a href="#">기타 잔</a><li>
+                    </ul>
+                </a><li>
+
+                <li class="nav_slide_title"> 바리스타/카페용품 <span class="nav_slide_arrow"><a href="sub.html" target="_self">&gt;</a></span>
+                    <ul class="nav_slide_sub" id="nav_slide_sub_06">
+                        <li><a href="#">탬퍼</a><li>
+                        <li><a href="#">머신 액세서리</a><li>
+                        <li><a href="#">머신 클리너</a><li>
+                        <li><a href="#">스팀피처</a><li>
+                        <li><a href="#">진동벨</a><li>
+                        <li><a href="#">도서</a><li>
+
+                    </ul>
+                </li>
+            </ul>
+            <img src="img/cancel.png" alt="닫기" class="icon_cancel">
         </div>
 
     </header>
@@ -529,12 +623,14 @@
         <div id="footer_info">
             <div id="info_box">
                 <h3>NOTICE</h3>
-                <ul id="info_list">
-                    <!--리스트 이동 나중에 자바로 만들기-->
-                    <a href="#"><li>카페뮤제오 휴무 공지(5월)</li></a>
-                    <a href="#"><li>2024 설 연휴 배송 공지 </li></a>
-                    <a href="#"><li>4월 25일(화) 고객 상담시간 변경 안내</li></a>
-                </ul>
+                <div class="info_list_wrap">
+                    <ul id="info_list">
+                        <!--리스트 이동 나중에 자바로 만들기-->
+                        <li><a href="#">카페뮤제오 휴무 공지(5월)</a></li>
+                        <li><a href="#">2024 설 연휴 배송 공지 </a></li>
+                        <li><a href="#">4월 25일(화) 고객 상담시간 변경 안내</a></li>
+                    </ul>
+                </div>
                 <a href="#">더보기 <span style="font-weight: bold;">></span></a>
             </div>
         </div>
@@ -550,32 +646,32 @@
                 </div>
                 <div id="footer_nav">
                     <ul>
-                        <a href="#"><li>회사소개</li></a>
-                        <a href="#"><li>사업소개</li></a>
-                        <a href="#"><li>카뮤인채용</li></a>
-                        <a href="#"><li>이용약관</li></a>
-                        <a href="#"><li>개인정보처리방침</li></a>
-                        <a href="#"><li>업체상담</li></a>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">사업소개</a></li>
+                        <li><a href="#">카뮤인채용</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">업체상담</a></li>
                     </ul>
                 </div>
                 <div id="footer_text">
                     <span>빨리 가기보다는 조금 늦더라도 멀리 보겠습니다. 신뢰를 바탕으로 실력을 쌓아갑니다.</span>
 
                     <p>(주)뮤제오 | 대표:서동의 <br>
-                    본사 : 서울특별시 성동구 연무장5가길 25 (성수역 SK V1 Tower) 1110~1112호 <br>
-                    로스팅, 물류센터:경기도 용인시 처인구 경안천로 256번길 69 <br>
-                    통신판매업신고번호:2021-서울성동-01241 | 개인정보보호책임자:최동환 <br>
-                    사업자등록번호:117-81-58115 <br>
-                    이메일:mail@museo.co.kr | 사업자,대량주문:sale@museo.co.kr <br>
-                    팩스:02-2607-0129 <br>
-                    Copyrightⓒ2002-2022 MUSEO Corp. All RIGHTS RESERVED
+                        본사 : 서울특별시 성동구 연무장5가길 25 (성수역 SK V1 Tower) 1110~1112호 <br>
+                        로스팅, 물류센터:경기도 용인시 처인구 경안천로 256번길 69 <br>
+                        통신판매업신고번호:2021-서울성동-01241 | 개인정보보호책임자:최동환 <br>
+                        사업자등록번호:117-81-58115 <br>
+                        이메일:mail@museo.co.kr | 사업자,대량주문:sale@museo.co.kr <br>
+                        팩스:02-2607-0129 <br>
+                        Copyrightⓒ2002-2022 MUSEO Corp. All RIGHTS RESERVED
                     </p>
                 </div>
                 <div id="footer_customer">
                     <h5>고객문의</h5>
                     <img src="img/phone.png" alt="">
                     <strong>1533-0918</strong>
-                    <p>AM 9:30 ~ PM 5:30  토, 일, 공휴일 휴무 <br> 
+                    <p>AM 9:30 ~ PM 5:30 토, 일, 공휴일 휴무 <br>
                         점심시간 PM 12:00 ~ PM 1:00</p>
                     <span>FAQ</span>
                 </div>

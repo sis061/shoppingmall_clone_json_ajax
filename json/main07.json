@@ -1,0 +1,41 @@
+[{
+    "url": "new_01.jpg",
+    "alt":"온두라스 렘피라 오바타",
+    "title": "갓볶은커피 온두라스 렘피라 <br> 오바타",
+    "price": "7,500원",
+    "originPrice": "8,500원",
+    "newIcon":"icon_new.gif"
+},{
+    "url": "new_02.jpg",
+    "alt":"라파엘 워시드",
+    "title": "생두 콜롬비아 산 라파엘 워시드 (워터멜론)",
+    "price": "24,000원",
+    "originPrice": "24,000원",
+    "newIcon":"icon_taxfree.gif"
+},{
+    "url": "new_03.jpg",
+    "alt":"폰타노 도징링",
+    "title": "폰타노 도징링 58mm - 블랙",
+    "price": "9,900원",
+    "originPrice": "15,000원",
+    "newIcon":"icon_event.gif"
+},{
+    "url": "new_04.jpg",
+    "alt":"폰타노 도징컵",
+    "title": "폰타노 도징컵 58mm - 블랙",
+    "price": "21,000원",
+    "originPrice": "30,000원",
+    "newIcon":"icon_event.gif"
+},{
+    "url": "new_05.jpg",
+    "alt":"안캅 에덱스 카푸치노",
+    "title": "안캅 에덱스 카푸치노 에볼루션 그린 190ml",
+    "price": "35,000원",
+    "originPrice": "40,000원"
+},{
+    "url": "new_05.jpg",
+    "alt":"일사 에볼루션 밀크저그",
+    "title": "일사 에볼루션 밀크저그 9컵 750cc 동",
+    "price": "53,000원",
+    "originPrice": "60,000원"
+}]

@@ -1,0 +1,61 @@
+[{
+    "url": "rec_01.jpg",
+    "alt":"비알레띠 모카포트",
+    "title": "비알레띠 뉴 브리카 모카포트 2컵",
+    "price": "52,800원",
+    "originPrice": "77,000원"
+},{
+    "url": "rec_02.jpg",
+    "alt":"비알레띠 올리브그린",
+    "title": "비알레띠 뉴 브리카 올리브그린 <br> 2컵",
+    "price": "59,400원",
+    "originPrice": "82,000원"
+},{
+    "url": "rec_03.jpg",
+    "alt":"비알레띠 인덕션",
+    "title": "비알레띠 브리카 인덕션 4컵",
+    "price": "77,000원",
+    "originPrice": "130,000원"
+},{
+    "url": "rec_04.jpg",
+    "alt":"모카포트 블렌드",
+    "title": "갓볶은커피 모카포트 블렌드",
+    "price": "6,000원",
+    "originPrice": "7,000원"
+},{
+    "url": "rec_05.jpg",
+    "alt":"저장용기",
+    "title": "비알레띠 글래스 커피 저장 용기",
+    "price": "24,900원",
+    "originPrice": "30,000원"
+},{
+    "url": "rec_06.jpg",
+    "alt":"온두라스",
+    "title": "갓볶은커피 온두라스 렘피라<br>오바타",
+    "price": "7,500원",
+    "originPrice": "8,500원"
+},{
+    "url": "rec_07.jpg",
+    "alt":"브라질 디카페인",
+    "title": "갓볶은커피 브라질 디카페인",
+    "price": "7,500원",
+    "originPrice": "8,500원"
+},{
+    "url": "rec_08.jpg",
+    "alt":"솜니 블렌드",
+    "title": "갓볶은커피 솜니 블렌드 <br>디카페인",
+    "price": "7,500원",
+    "originPrice": "8,000원"
+},{
+    "url": "rec_09.jpg",
+    "alt":"케냐",
+    "title": "갓볶은커피 케냐 클래식",
+    "price": "7,000원",
+    "originPrice": "8,000원"
+},{
+    "url": "rec_10.jpg",
+    "alt":"예멘 모카",
+    "title": "갓볶은커피 예멘 모카 마타리",
+    "price": "11,000원",
+    "originPrice": "12,000원"
+}]

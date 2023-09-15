@@ -1,0 +1,17 @@
+[{
+    "urlBig": "event_big1.jpg",
+    "urlSmall": "event_1_1.jpg",
+    "title": "아임요 청포도 베이스 1kg",
+    "price": "9,100원",
+    "originPrice": "12,000원",
+    "iconHeart": "heart.png",
+    "iconCart": "cart.png"
+},{
+    "urlBig": "event_big2.jpg",
+    "urlSmall": "event_2_1.jpg",
+    "title": "카페뮤제오 캡슐커피 오르카 10개입(1+1 행사)",
+    "price": "6,900원",
+    "originPrice": "6,900원",
+    "iconHeart": "heart.png",
+    "iconCart": "cart.png"
+}]
