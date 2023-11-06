@@ -6,6 +6,10 @@
         font-family: 'Roboto', sans-serif;
 }
 
+ul, ol, li {
+        list-style:none;
+}
+
 /*--헤더 시작--*/
 header {
         width: 100%;
